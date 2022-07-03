@@ -37,10 +37,16 @@ export const ControlPanel: React.FC<{ className: string }> = props => {
           <IconMindMapping style={{ fontSize: 18 }} />
           <span className="a-ml">组件</span>
         </div>
-        <div className="view-container-body">
-          {controls.map((Component, index) => (
-            <div key={index} className="view-control-item a-lmb">
-              {Component && <Component key={index} addSection={addSection}></Component>}
+        <div className="view-container-body pedestal-control-container">
+          {controls.map((config, index) => (
+            <div key={index} className="control-button-container">
+              <div
+                className="a-x-center a-y-center a-flex-column a-pointer control-button"
+                onClick={() => addSection(config.getConfig())}
+              >
+                {config.icon}
+                <div>{config.name}</div>
+              </div>
             </div>
           ))}
         </div>

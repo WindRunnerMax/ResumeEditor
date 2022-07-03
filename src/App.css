@@ -21,6 +21,7 @@ body {
 }
 
 .resume-editor > .operate-panel {
+  border-right: 1px solid #eee;
   flex-shrink: 0;
   width: 230px;
 }
@@ -44,6 +45,7 @@ body {
 .resume-editor > .main-panel {
   background-color: #eee;
   flex: 1;
+  overflow: auto;
 }
 
 @media print {

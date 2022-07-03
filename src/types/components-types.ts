@@ -2,10 +2,11 @@ import React from "react";
 import { ContextDispatch, ContextState } from "src/store/context";
 
 export interface Panel {
-  control: React.FC<{
-    className?: string;
-    addSection: (cld: LocalComponentConfig) => void;
-  }>; // 组件面板
+  control: {
+    icon: JSX.Element;
+    name: string;
+    getConfig: () => LocalComponentConfig;
+  }; // 组件面板
   main: React.FC<{
     dispatch: ContextDispatch;
     instance: LocalComponentConfig;

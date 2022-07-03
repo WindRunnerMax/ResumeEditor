@@ -4,12 +4,8 @@ import { IconImage } from "@arco-design/web-react/icon";
 import { getLocalComponentConfigClone } from "src/utils/components-utils";
 import { image } from ".";
 
-export const ImageControl: ControlPanelFC = props => {
-  return (
-    <div onClick={() => props.addSection(getLocalComponentConfigClone(image))}>
-      <IconImage />
-    </div>
-  );
+export const ImageControl: ControlPanelFC = {
+  icon: <IconImage />,
+  name: "图片",
+  getConfig: () => getLocalComponentConfigClone(image),
 };
-
-ImageControl.defaultProps = {};

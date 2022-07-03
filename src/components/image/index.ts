@@ -11,12 +11,12 @@ export const image: LocalComponent = {
     layout: {
       x: 0,
       y: 0,
-      w: 4,
-      h: 1,
+      w: 20,
+      h: 20,
       isDraggable: true,
       isResizable: true,
-      minW: 1,
-      minH: 1,
+      minW: 10,
+      minH: 10,
     },
   },
   module: {

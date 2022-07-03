@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import { Form, FormInstance, ImageProps, Input, Upload } from "@arco-design/web-react";
 import { IconArrowUp } from "@arco-design/web-react/icon";
 import { UploadProps } from "@arco-design/web-react/es/Upload";
-import { EditorPanelFC } from "src/types/components-types";
+import { EditorPanelFC, LocalComponentConfig } from "src/types/components-types";
 import { findOneInNodeTree } from "src/utils/node-tree-utils";
 import { actions } from "src/store/actions";
 import { useMemoizedFn } from "ahooks";
@@ -13,7 +13,8 @@ const ImageEditor: EditorPanelFC = props => {
   const formRef = useRef<FormInstance>(null);
   const { state, dispatch } = props;
   const id = state.selectedNode.id;
-  const imageProps = findOneInNodeTree(state.cld.children, id) as Partial<ImageProps>;
+  const imageProps = (findOneInNodeTree(state.cld.children, id) as LocalComponentConfig)
+    .props as Partial<ImageProps>;
 
   const onChange = useMemoizedFn(
     debounce((values: Record<string, unknown>) => {
@@ -36,9 +37,12 @@ const ImageEditor: EditorPanelFC = props => {
   const beforeUpload: UploadProps["beforeUpload"] = file => {
     return new Promise(resolve => {
       // 需要自行实现上传逻辑
-      const src = window.URL.createObjectURL(file);
-      onChange({ src });
-      formRef.current && formRef.current.setFieldsValue({ src });
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+        onChange({ src: reader.result });
+        formRef.current && formRef.current.setFieldsValue({ src: reader.result });
+      };
       resolve(false);
     });
   };
@@ -59,19 +63,10 @@ const ImageEditor: EditorPanelFC = props => {
                 showUploadList={false}
                 withCredentials={true}
               >
-                <div className="a-x-center a-y-center ">
-                  <IconArrowUp />
-                </div>
+                <IconArrowUp />
               </Upload>
             }
           />
-        </Form.Item>
-
-        <Form.Item label="Title" field="title">
-          <Input />
-        </Form.Item>
-        <Form.Item label="Description" field="description">
-          <Input />
         </Form.Item>
       </Form>
     </div>

@@ -1,7 +1,7 @@
 import "./index.scss";
 import { FC } from "react";
 import { LocalComponentConfig } from "src/types/components-types";
-import { Image as ArcoImage, ImageProps } from "@arco-design/web-react";
+import { Image as ArcoImage } from "@arco-design/web-react";
 import { classes } from "src/utils/common/utils";
 
 const Image: FC<{
@@ -12,7 +12,7 @@ const Image: FC<{
     <div className={classes("pedestal-main-image", props.className)}>
       <ArcoImage
         className="pedestal-main-image"
-        {...props.instance}
+        {...props.instance.props}
         style={props.instance.style}
       ></ArcoImage>
     </div>

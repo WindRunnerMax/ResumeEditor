@@ -42,3 +42,94 @@
   margin: 10px auto;
   width: 210mm;
 }
+
+.pedestal {
+  &-item {
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+  &-item:hover {
+    box-shadow: 0 0 0 1px var(--color-border-3);
+  }
+
+  &-item-focus {
+    outline: 1px solid #aaa;
+  }
+
+  &-item .react-resizable-handle {
+    opacity: 0;
+  }
+
+  &-item.react-draggable .pedestal-drag-dot {
+    display: block;
+    opacity: 0;
+  }
+
+  &-responsive-grid-layout {
+    width: 100%;
+  }
+
+  &-responsive-grid-layout .react-grid-placeholder {
+    background: var(--color-blue);
+  }
+
+  &-drag-dot {
+    display: none;
+    font-size: 14px;
+    margin-left: 50%;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 999;
+  }
+
+  &-drag-dot:hover {
+    cursor: move;
+  }
+}
+
+.pedestal-item:hover.react-draggable,
+.pedestal-item-focus.react-draggable {
+  .pedestal-drag-dot,
+  .react-resizable-handle {
+    opacity: 1 !important;
+  }
+}
+
+.pedestal-control-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  padding: 0 5px;
+
+  .pedestal-control-title {
+    font-weight: bold;
+  }
+
+  .control-button-container {
+    display: flex;
+    justify-content: center;
+    width: 33.3%;
+  }
+
+  .control-button {
+    background-color: rgba(250, 250, 250, 0.5);
+    border: 1px solid var(--color-border-1);
+    box-sizing: border-box;
+    color: var(--color-text-1);
+    font-size: 11px;
+    height: 50px;
+    padding-top: 3px;
+    width: 50px;
+  }
+
+  .control-button .arco-icon {
+    font-size: 18px;
+    margin-bottom: 3px;
+  }
+
+  .a-btn-disable {
+    color: var(--color-text-4);
+  }
+}
