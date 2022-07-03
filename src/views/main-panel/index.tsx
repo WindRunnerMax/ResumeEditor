@@ -40,8 +40,12 @@ export const MainPanel: React.FC<PedestalMainProps> = props => {
 
   const focusElement = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>,
-    config: LocalComponentConfig
+    config?: LocalComponentConfig
   ) => {
+    if (!config) {
+      dispatch({ type: actions.SELECT_NODE, payload: { id: "", name: "" } });
+      return void 0;
+    }
     if (config.id === state.selectedNode.id) {
       // 再点击一次则取消选中
       dispatch({ type: actions.SELECT_NODE, payload: { id: "", name: "" } });
@@ -72,7 +76,7 @@ export const MainPanel: React.FC<PedestalMainProps> = props => {
   };
 
   return (
-    <div className={props.className}>
+    <div className={props.className} onClick={e => focusElement(e)}>
       <div className="pedestal-main-container">
         <ReferenceLine style={{ minHeight }} display={dragging} rows={rowHeight} cols={cols}>
           <ResponsiveGridLayout

@@ -1,6 +1,7 @@
 @import './styles/asse.css';
 @import 'react-grid-layout/css/styles.css';
 @import 'react-resizable/css/styles.css';
+@import '@arco-design/web-react/dist/css/arco.css';
 
 body {
   --color-blue: #4c98f7;
@@ -45,7 +46,6 @@ body {
 .resume-editor > .main-panel {
   background-color: #eee;
   flex: 1;
-  overflow: auto;
 }
 
 @media print {
@@ -55,5 +55,10 @@ body {
 
   .resume-editor > .main-panel {
     background-color: #fff !important;
+    overflow: hidden;
+  }
+
+  .pedestal-main-container {
+    margin: 0 auto !important;
   }
 }
