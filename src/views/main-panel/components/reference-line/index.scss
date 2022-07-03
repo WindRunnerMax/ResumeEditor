@@ -1,0 +1,14 @@
+.pedestal-main-reference-line {
+  border: 1px solid transparent;
+
+  &.enable {
+    background-image: radial-gradient(circle, #999 0.8px, transparent 0);
+
+    /**
+         * 网格线
+         * background-position: 0 0 !important;
+         * background-image: linear-gradient(90deg, #ccc 1px,transparent 0),
+         *                   linear-gradient(#ccc 1px, transparent 0);
+         */
+  }
+}

@@ -1,0 +1,16 @@
+.pedestal-main-image {
+  height: 100%;
+  width: 100%;
+}
+
+.pedestal-main-image > .arco-image-img {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.image-editor-upload {
+  align-items: center;
+  color: var(--color-text-2);
+  display: flex;
+}

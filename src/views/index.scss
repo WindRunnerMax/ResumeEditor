@@ -1,0 +1,44 @@
+@import 'src/styles/asse';
+
+.view-control-panel,
+.view-editor-panel {
+  max-height: 100vh;
+  position: fixed;
+  width: 230px;
+}
+
+.view-container-title {
+  padding: 5px;
+}
+
+.view-container-body {
+  padding: 5px;
+}
+
+.view-control-item {
+  margin: 5px;
+}
+
+.view-main-container {
+  border: 1px solid #fff;
+  position: relative;
+}
+
+.view-main-toolbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.view-main-focus {
+  border: 1px solid #aaa;
+}
+
+.pedestal-main-container {
+  background-color: #fff;
+  color: var(--color-text-2);
+  height: 305mm;
+  margin: 10px auto;
+  width: 210mm;
+}

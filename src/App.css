@@ -1,0 +1,57 @@
+@import './styles/asse.css';
+@import 'react-grid-layout/css/styles.css';
+@import 'react-resizable/css/styles.css';
+
+body {
+  --color-blue: #4c98f7;
+  --color-green: #009688;
+  --color-white: #fff;
+  --color-yellow: #ffb800;
+  --color-orange: #ff5722;
+  --color-grey: #606266;
+
+  margin: 0;
+  padding: 0;
+}
+
+.resume-editor {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.resume-editor > .operate-panel {
+  flex-shrink: 0;
+  width: 230px;
+}
+
+.resume-editor > .operate-panel > .fixed-panel {
+  height: 100vh;
+  position: fixed;
+  width: 230px;
+}
+
+.operate-panel .control-panel,
+.operate-panel .editor-panel {
+  height: 50%;
+  width: 100%;
+}
+
+.operate-panel .editor-panel {
+  border-top: 1px solid #eee;
+}
+
+.resume-editor > .main-panel {
+  background-color: #eee;
+  flex: 1;
+}
+
+@media print {
+  .resume-editor > .operate-panel {
+    display: none !important;
+  }
+
+  .resume-editor > .main-panel {
+    background-color: #fff !important;
+  }
+}
