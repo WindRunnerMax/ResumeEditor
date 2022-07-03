@@ -18,7 +18,7 @@ export default () => (
       </div>
       <MainPanel
         className="main-panel"
-        rowHeight={10}
+        rowHeight={8}
         cols={60}
         minHeight="100%"
         allowOverlap={false}

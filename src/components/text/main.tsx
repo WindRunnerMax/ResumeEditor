@@ -75,7 +75,7 @@ export const RichText: FC<{
 
   const withVoidEditor = useMemo(() => withVoidElements(editor), [editor, withVoidElements]);
   return (
-    <div id={props.instance.id} className={classes("pedestal-text", props.className)}>
+    <div className={classes("pedestal-text", props.className)} style={props.instance.style}>
       <Slate editor={withVoidEditor} value={initText} onChange={updateText}>
         <div onClick={e => e.stopPropagation()}>
           <MenuToolBar isRender={false} commands={commands}></MenuToolBar>

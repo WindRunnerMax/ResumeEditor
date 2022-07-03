@@ -39,7 +39,7 @@ interface DELETE_ONE_BY_UUID {
 }
 interface UPDATE_ONE {
   type: typeof actions.UPDATE_ONE;
-  payload: { id: string; key: string; data: unknown };
+  payload: { id: string; key: string; data: unknown; merge?: boolean };
 }
 interface UPDATE_ALL {
   type: typeof actions.UPDATE_ALL;

@@ -3,6 +3,7 @@ import { IconEdit } from "@arco-design/web-react/icon";
 import { useContext, useMemo } from "react";
 import { AppContext } from "src/store/context";
 import { getComponentInstanceSync } from "src/utils/components-utils";
+import { CustomCSS } from "./components/custom-css";
 
 export const EditorPanel: React.FC<{ className: string }> = props => {
   const { state, dispatch } = useContext(AppContext);
@@ -13,7 +14,12 @@ export const EditorPanel: React.FC<{ className: string }> = props => {
     const componentInstance = getComponentInstanceSync(selectNodeName);
     if (!componentInstance || !componentInstance.main) return null;
     const Component = componentInstance.editor;
-    return <Component state={state} dispatch={dispatch}></Component>;
+    return (
+      <>
+        <Component state={state} dispatch={dispatch}></Component>
+        <CustomCSS state={state} dispatch={dispatch}></CustomCSS>
+      </>
+    );
   };
 
   // eslint-disable-next-line react-hooks/exhaustive-deps

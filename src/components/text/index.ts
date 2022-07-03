@@ -14,8 +14,8 @@ export const richText: LocalComponent = {
       h: 10,
       isDraggable: true,
       isResizable: true,
-      minW: 6,
-      minH: 4,
+      minW: 4,
+      minH: 2,
     },
   },
   module: {

@@ -105,7 +105,8 @@ export const updateOneInNodeTree = (
   tree: LocalComponentConfig["children"],
   uuid: string,
   key: string,
-  data: unknown
+  data: unknown,
+  merge: boolean
 ): boolean => {
   const node = findOneInNodeTree(tree, uuid);
   if (!node) return false;
@@ -119,7 +120,8 @@ export const updateOneInNodeTree = (
   if (isObject(preKeyData)) {
     const target = preKeyData[lastKey];
     if (isObject(target) && isObject(data)) {
-      preKeyData[lastKey] = { ...target, ...data };
+      if (merge) preKeyData[lastKey] = { ...target, ...data };
+      else preKeyData[lastKey] = { ...data };
     } else {
       preKeyData[lastKey] = data;
     }

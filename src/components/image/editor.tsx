@@ -56,7 +56,7 @@ const ImageEditor: EditorPanelFC = props => {
             addAfter={
               <Upload
                 className="image-editor-upload"
-                accept="image/jpeg, image/png"
+                accept="image/*"
                 action={"xxx/url"}
                 beforeUpload={beforeUpload}
                 onChange={() => void 0}

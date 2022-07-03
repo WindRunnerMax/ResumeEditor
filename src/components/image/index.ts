@@ -15,8 +15,8 @@ export const image: LocalComponent = {
       h: 20,
       isDraggable: true,
       isResizable: true,
-      minW: 10,
-      minH: 10,
+      minW: 2,
+      minH: 2,
     },
   },
   module: {

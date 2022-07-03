@@ -1,11 +1,15 @@
 .pedestal-image {
+  align-items: center;
+  display: flex;
   height: 100%;
+  justify-content: center;
+  object-fit: contain;
   width: 100%;
 }
 
 .pedestal-image > .arco-image-img {
   height: 100%;
-  object-fit: contain;
+  object-fit: inherit;
   width: 100%;
 }
 

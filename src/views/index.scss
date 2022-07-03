@@ -47,6 +47,7 @@
   &-item {
     box-sizing: border-box;
     display: inline-block;
+    overflow: hidden;
   }
 
   &-item:hover {

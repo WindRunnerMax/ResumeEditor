@@ -9,7 +9,7 @@ const Image: FC<{
   instance: LocalComponentConfig;
 }> = props => {
   return (
-    <div id={props.instance.id} className={classes("pedestal-image", props.className)}>
+    <div className={classes("pedestal-image", props.className)}>
       <ArcoImage
         className="pedestal-image"
         {...props.instance.props}

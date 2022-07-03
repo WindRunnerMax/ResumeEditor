@@ -47,8 +47,8 @@ export const reducer = (state: State, action: Actions): void | State => {
       break;
     }
     case actions.UPDATE_ONE: {
-      const { id: uuid, key, data } = action.payload;
-      updateOneInNodeTree(state.cld.children, uuid, key, data);
+      const { id: uuid, key, data, merge = true } = action.payload;
+      updateOneInNodeTree(state.cld.children, uuid, key, data, merge);
       break;
     }
     case actions.UPDATE_ALL: {

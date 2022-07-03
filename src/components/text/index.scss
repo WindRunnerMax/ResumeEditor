@@ -1,0 +1,10 @@
+.pedestal-text {
+  color: var(--color-text-1);
+  line-height: 1.8;
+
+  .doc-line {
+    color: inherit;
+    line-height: inherit;
+    margin: 0;
+  }
+}

@@ -1,5 +1,5 @@
 # ResumeEditor
-`ResumeEditor`简历编辑器，尝试做个简单的简历编辑器。
+`ResumeEditor`简历编辑器，尝试做个简单的拖拽简历编辑器。
 
 
 ```bash

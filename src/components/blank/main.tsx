@@ -8,6 +8,9 @@ export const BlankMain: FC<{
   instance: LocalComponentConfig;
 }> = props => {
   return (
-    <div id={props.instance.id} className={classes("pedestal-main-image", props.className)}></div>
+    <div
+      className={classes("pedestal-main-image", props.className)}
+      style={props.instance.style}
+    ></div>
   );
 };
