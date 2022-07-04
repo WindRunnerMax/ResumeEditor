@@ -1,5 +1,6 @@
 # ResumeEditor
- [Github](https://github.com/WindrunnerMax/ResumeEditor) ｜ [Resume DEMO](https://windrunnermax.github.io/ResumeEditor/)
+ [Github](https://github.com/WindrunnerMax/ResumeEditor) ｜ [Resume DEMO](https://windrunnermax.github.io/ResumeEditor/)   
+ 
 `ResumeEditor`简历编辑器，因为各种模版用起来细节上并不是很满意，所以尝试做个简单的拖拽简历编辑器。
 
 ```bash
