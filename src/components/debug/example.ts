@@ -407,7 +407,12 @@ export const example: CLD = {
           isResizable: true,
         },
       },
-      style: { border: "1px solid rgb(78,89,105)", borderRadius: "5px", padding: "3px 8px" },
+      style: {
+        border: "1px solid rgb(78,89,105)",
+        borderRadius: "5px",
+        padding: "3px 8px",
+        fontSize: "13px",
+      },
       props: { text: [{ children: [{ text: "开源" }], align: "center" }] },
       children: [],
       name: "rich-text",
@@ -429,7 +434,12 @@ export const example: CLD = {
           isResizable: true,
         },
       },
-      style: { border: "1px solid rgb(78,89,105)", borderRadius: "5px", padding: "3px 8px" },
+      style: {
+        border: "1px solid rgb(78,89,105)",
+        borderRadius: "5px",
+        padding: "3px 8px",
+        fontSize: "13px",
+      },
       props: { text: [{ children: [{ text: "知乎" }], align: "center" }] },
       children: [],
       name: "rich-text",
@@ -438,7 +448,7 @@ export const example: CLD = {
       id: "580b67c7-fcf6-41e9-803d-d97d7efe57cd",
       config: {
         layout: {
-          w: 7,
+          w: 6,
           h: 5,
           x: 12,
           y: 81,
@@ -451,7 +461,12 @@ export const example: CLD = {
           isResizable: true,
         },
       },
-      style: { border: "1px solid rgb(78,89,105)", borderRadius: "5px", padding: "3px 8px" },
+      style: {
+        border: "1px solid rgb(78,89,105)",
+        borderRadius: "5px",
+        padding: "3px 8px",
+        fontSize: "13px",
+      },
       props: { text: [{ children: [{ text: "电子产品" }], align: "center" }] },
       children: [],
       name: "rich-text",
@@ -482,8 +497,8 @@ export const example: CLD = {
       id: "b05d83dd-2712-4548-ae01-77fd18acdae9",
       config: {
         layout: {
-          w: 17,
-          h: 18,
+          w: 18,
+          h: 14,
           x: 2,
           y: 94,
           i: "b05d83dd-2712-4548-ae01-77fd18acdae9",
@@ -495,7 +510,7 @@ export const example: CLD = {
           isResizable: true,
         },
       },
-      style: {},
+      style: { fontSize: "13px" },
       props: {
         text: [
           { children: [{ text: "做事稳重细致，对待工作认真，善于沟通合作，责任心较强。" }] },
