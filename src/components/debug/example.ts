@@ -8,7 +8,7 @@ export const example: CLD = {
       id: "25d349f3-60bf-4425-b58d-726cafe2c1fd",
       config: {
         layout: {
-          w: 22,
+          w: 18,
           h: 1,
           x: 1,
           y: 1,
@@ -30,9 +30,9 @@ export const example: CLD = {
       id: "094ea4b6-2f58-497f-8007-d5d36239b7ef",
       config: {
         layout: {
-          w: 33,
+          w: 37,
           h: 1,
-          x: 26,
+          x: 22,
           y: 1,
           i: "094ea4b6-2f58-497f-8007-d5d36239b7ef",
           minW: 1,
@@ -54,7 +54,7 @@ export const example: CLD = {
         layout: {
           w: 12,
           h: 25,
-          x: 5,
+          x: 4,
           y: 5,
           i: "ec338794-a087-4d39-b31e-35d790ffdc54",
           minW: 2,
@@ -76,7 +76,7 @@ export const example: CLD = {
         layout: {
           w: 2,
           h: 3,
-          x: 3,
+          x: 2,
           y: 42,
           i: "ac5342eb-133c-46d9-8581-a652f320a32b",
           minW: 2,
@@ -100,7 +100,7 @@ export const example: CLD = {
         layout: {
           w: 2,
           h: 3,
-          x: 3,
+          x: 2,
           y: 47,
           i: "f3834125-d4a7-4328-89ad-8c24f41755d9",
           minW: 2,
@@ -124,7 +124,7 @@ export const example: CLD = {
         layout: {
           w: 13,
           h: 3,
-          x: 5,
+          x: 4,
           y: 42,
           i: "aeac63ed-80b8-4b0b-9ea9-4ca90d23e761",
           minW: 4,
@@ -146,7 +146,7 @@ export const example: CLD = {
         layout: {
           w: 12,
           h: 3,
-          x: 5,
+          x: 4,
           y: 47,
           i: "53d26719-d826-4822-925c-5333ef364c66",
           minW: 4,
@@ -168,7 +168,7 @@ export const example: CLD = {
         layout: {
           w: 2,
           h: 3,
-          x: 3,
+          x: 2,
           y: 52,
           i: "6a74fac0-59bc-437a-95c0-34b98dbb4a6a",
           minW: 2,
@@ -192,7 +192,7 @@ export const example: CLD = {
         layout: {
           w: 13,
           h: 3,
-          x: 5,
+          x: 4,
           y: 52,
           i: "fa458454-5ca1-4d36-a0d2-78681fedf1e0",
           minW: 4,
@@ -214,7 +214,7 @@ export const example: CLD = {
         layout: {
           w: 2,
           h: 3,
-          x: 3,
+          x: 2,
           y: 57,
           i: "23c4926c-1362-4f84-9060-e33a5b198fbd",
           minW: 2,
@@ -238,7 +238,7 @@ export const example: CLD = {
         layout: {
           w: 13,
           h: 3,
-          x: 5,
+          x: 4,
           y: 57,
           i: "3cefaf34-84b9-44ca-bf75-d939f11d4deb",
           minW: 4,
@@ -260,7 +260,7 @@ export const example: CLD = {
         layout: {
           w: 2,
           h: 3,
-          x: 3,
+          x: 2,
           y: 62,
           i: "bf46c37f-d469-4525-ae48-f1a5768d8bb1",
           minW: 2,
@@ -284,7 +284,7 @@ export const example: CLD = {
         layout: {
           w: 13,
           h: 3,
-          x: 5,
+          x: 4,
           y: 62,
           i: "4da79729-4d7c-41d7-b578-4feb8c2b022f",
           minW: 4,
@@ -306,7 +306,7 @@ export const example: CLD = {
         layout: {
           w: 2,
           h: 3,
-          x: 3,
+          x: 2,
           y: 67,
           i: "7f9c07e4-f198-4dce-b7c6-bdd0a68cbb9a",
           minW: 2,
@@ -330,7 +330,7 @@ export const example: CLD = {
         layout: {
           w: 13,
           h: 3,
-          x: 5,
+          x: 4,
           y: 67,
           i: "0a0ec2e2-f884-4964-8e11-022b11c9d924",
           minW: 4,
@@ -342,7 +342,7 @@ export const example: CLD = {
         },
       },
       style: {},
-      props: { text: [{ children: [{ text: " touchczy@outlook.com" }] }] },
+      props: { text: [{ children: [{ text: "  touchczy@outlook.com" }] }] },
       children: [],
       name: "rich-text",
     },
@@ -350,7 +350,7 @@ export const example: CLD = {
       id: "43e2ae9a-574e-4fe6-80f4-9b896b906319",
       config: {
         layout: {
-          w: 21,
+          w: 18,
           h: 6,
           x: 1,
           y: 32,
@@ -373,8 +373,8 @@ export const example: CLD = {
       config: {
         layout: {
           w: 15,
-          h: 6,
-          x: 3,
+          h: 5,
+          x: 2,
           y: 74,
           i: "0e7070a4-5e44-4e44-bfa5-db8363710285",
           minW: 4,
@@ -385,7 +385,7 @@ export const example: CLD = {
           isResizable: true,
         },
       },
-      style: { fontSize: "25px", color: "rgb(var(--blue-6))" },
+      style: { fontSize: "23px", color: "rgb(var(--blue-6))" },
       props: { text: [{ children: [{ text: "兴趣爱好", bold: true }], align: "left" }] },
       children: [],
       name: "rich-text",
@@ -396,7 +396,7 @@ export const example: CLD = {
         layout: {
           w: 4,
           h: 5,
-          x: 3,
+          x: 2,
           y: 81,
           i: "60b24a69-a72c-4315-bb4d-ab7522f101de",
           minW: 4,
@@ -418,7 +418,7 @@ export const example: CLD = {
         layout: {
           w: 4,
           h: 5,
-          x: 8,
+          x: 7,
           y: 81,
           i: "42337159-f7f5-4464-b5a7-b08c0bfa5a5d",
           minW: 4,
@@ -440,7 +440,7 @@ export const example: CLD = {
         layout: {
           w: 7,
           h: 5,
-          x: 13,
+          x: 12,
           y: 81,
           i: "580b67c7-fcf6-41e9-803d-d97d7efe57cd",
           minW: 4,
@@ -461,8 +461,8 @@ export const example: CLD = {
       config: {
         layout: {
           w: 15,
-          h: 6,
-          x: 3,
+          h: 5,
+          x: 2,
           y: 88,
           i: "e651bd15-409b-40a6-9735-9cfb0576716c",
           minW: 4,
@@ -473,7 +473,7 @@ export const example: CLD = {
           isResizable: true,
         },
       },
-      style: { fontSize: "25px", color: "rgb(var(--blue-6))" },
+      style: { fontSize: "23px", color: "rgb(var(--blue-6))" },
       props: { text: [{ children: [{ text: "自我介绍", bold: true }], align: "left" }] },
       children: [],
       name: "rich-text",
@@ -484,7 +484,7 @@ export const example: CLD = {
         layout: {
           w: 17,
           h: 18,
-          x: 3,
+          x: 2,
           y: 94,
           i: "b05d83dd-2712-4548-ae01-77fd18acdae9",
           minW: 4,
@@ -501,6 +501,463 @@ export const example: CLD = {
           { children: [{ text: "做事稳重细致，对待工作认真，善于沟通合作，责任心较强。" }] },
           { children: [{ text: "热衷于新兴技术，自学能力强，为亲自完成项目而欣喜。" }] },
           { children: [{ text: "能与计算机结缘，幸甚之至。" }] },
+        ],
+      },
+      children: [],
+      name: "rich-text",
+    },
+    {
+      id: "8398eec9-f878-4baf-bf32-f00a9995ad2b",
+      config: {
+        layout: {
+          w: 33,
+          h: 13,
+          x: 22,
+          y: 8,
+          i: "8398eec9-f878-4baf-bf32-f00a9995ad2b",
+          minW: 4,
+          minH: 2,
+          moved: false,
+          static: false,
+          isDraggable: true,
+          isResizable: true,
+        },
+      },
+      style: { fontSize: "12px" },
+      props: {
+        text: [
+          {
+            children: [
+              { text: "2016.09-2020.06  山东科技大学   本科   计算机科学与技术", bold: true },
+            ],
+          },
+          {
+            children: [{ text: "2020.09-2023.06  山东科技大学   硕士   计算机技术 ", bold: true }],
+          },
+          { children: [{ text: "奖项荣誉:   ", bold: true }, { text: "中国软件杯国赛一等奖" }] },
+          { children: [{ text: "                   蓝桥杯Java国赛三等奖 " }] },
+          { children: [{ text: "                   微信小程序开发大赛华东赛区二等奖" }] },
+        ],
+      },
+      children: [],
+      name: "rich-text",
+    },
+    {
+      id: "9da35056-0867-4eaf-9ade-1beb9e688e56",
+      config: {
+        layout: {
+          w: 15,
+          h: 5,
+          x: 22,
+          y: 3,
+          i: "9da35056-0867-4eaf-9ade-1beb9e688e56",
+          minW: 4,
+          minH: 2,
+          moved: false,
+          static: false,
+          isDraggable: true,
+          isResizable: true,
+        },
+      },
+      style: { fontSize: "23px", color: "rgb(var(--blue-6))" },
+      props: { text: [{ children: [{ text: "教育经历", bold: true }], align: "left" }] },
+      children: [],
+      name: "rich-text",
+    },
+    {
+      id: "2965658b-b4d4-48ea-b865-1f84cb6e1c71",
+      config: {
+        layout: {
+          w: 15,
+          h: 4,
+          x: 22,
+          y: 21,
+          i: "2965658b-b4d4-48ea-b865-1f84cb6e1c71",
+          minW: 4,
+          minH: 2,
+          moved: false,
+          static: false,
+          isDraggable: true,
+          isResizable: true,
+        },
+      },
+      style: { fontSize: "23px", color: "rgb(var(--blue-6))" },
+      props: { text: [{ children: [{ text: "实习经历", bold: true }], align: "left" }] },
+      children: [],
+      name: "rich-text",
+    },
+    {
+      id: "43b795d3-c84e-40db-99d9-f7ab68d4b75f",
+      config: {
+        layout: {
+          w: 36,
+          h: 10,
+          x: 22,
+          y: 26,
+          i: "43b795d3-c84e-40db-99d9-f7ab68d4b75f",
+          minW: 4,
+          minH: 2,
+          moved: false,
+          static: false,
+          isDraggable: true,
+          isResizable: true,
+        },
+      },
+      style: { fontSize: "12px" },
+      props: {
+        text: [
+          {
+            children: [
+              { text: "2021.07-2021.09   腾讯科技(深圳)有限公司   IEG-PC游戏平台部", bold: true },
+            ],
+            align: "justify",
+          },
+          {
+            children: [
+              {
+                text: "实习期间主要工作为WeGame商城前端开发，主要负责了直播功能以及对于内部库的单元测试，在职期间跟随项目学习了一些对于首屏的优化实现方案、项目需求开发整体流程、CI/CD流水线构建以及上云计划等。",
+              },
+            ],
+            align: "justify",
+          },
+        ],
+      },
+      children: [],
+      name: "rich-text",
+    },
+    {
+      id: "18d7832f-96aa-4948-aaaf-a136eda73feb",
+      config: {
+        layout: {
+          w: 15,
+          h: 5,
+          x: 22,
+          y: 37,
+          i: "18d7832f-96aa-4948-aaaf-a136eda73feb",
+          minW: 4,
+          minH: 2,
+          moved: false,
+          static: false,
+          isDraggable: true,
+          isResizable: true,
+        },
+      },
+      style: { fontSize: "23px", color: "rgb(var(--blue-6))" },
+      props: { text: [{ children: [{ text: "技能清单", bold: true }], align: "left" }] },
+      children: [],
+      name: "rich-text",
+    },
+    {
+      id: "3dd34caf-2d60-492a-b16d-26deac1dbdc8",
+      config: {
+        layout: {
+          w: 37,
+          h: 12,
+          x: 22,
+          y: 42,
+          i: "3dd34caf-2d60-492a-b16d-26deac1dbdc8",
+          minW: 4,
+          minH: 2,
+          moved: false,
+          static: false,
+          isDraggable: true,
+          isResizable: true,
+        },
+      },
+      style: { fontSize: "12px" },
+      props: {
+        text: [
+          {
+            children: [{ text: "掌握：", bold: true }, { text: "HTML、CSS、JavaScript、PHP" }],
+            align: "justify",
+          },
+          {
+            align: "justify",
+            children: [
+              { text: "熟悉：", bold: true },
+              { text: "Vue.js、uniapp、小程序、ThinkPHP" },
+            ],
+          },
+          {
+            align: "justify",
+            children: [{ text: "了解：", bold: true }, { text: "React、Python、Java、Weex" }],
+          },
+          {
+            align: "justify",
+            children: [{ text: "Blog: ", bold: true }, { text: "https://blog.touchczy.top/ " }],
+          },
+          {
+            align: "justify",
+            children: [
+              { text: "Github: ", bold: true },
+              { text: "https://github.com/WindrunnerMax/" },
+            ],
+          },
+        ],
+      },
+      children: [],
+      name: "rich-text",
+    },
+    {
+      id: "988d8bef-b36e-40ab-bfb1-35a6f83d73a2",
+      config: {
+        layout: {
+          w: 15,
+          h: 5,
+          x: 22,
+          y: 55,
+          i: "988d8bef-b36e-40ab-bfb1-35a6f83d73a2",
+          minW: 4,
+          minH: 2,
+          moved: false,
+          static: false,
+          isDraggable: true,
+          isResizable: true,
+        },
+      },
+      style: { fontSize: "23px", color: "rgb(var(--blue-6))" },
+      props: { text: [{ children: [{ text: "项目经历", bold: true }], align: "left" }] },
+      children: [],
+      name: "rich-text",
+    },
+    {
+      id: "43041699-1f40-464f-85fc-fe994cf999a7",
+      config: {
+        layout: {
+          w: 36,
+          h: 12,
+          x: 22,
+          y: 78,
+          i: "43041699-1f40-464f-85fc-fe994cf999a7",
+          minW: 4,
+          minH: 2,
+          moved: false,
+          static: false,
+          isDraggable: true,
+          isResizable: true,
+        },
+      },
+      style: { fontSize: "12px" },
+      props: {
+        text: [
+          {
+            children: [
+              { text: "2020-12 至       今        书小二小程序", bold: true },
+              { text: " " },
+            ],
+          },
+          {
+            "unordered-list": true,
+            "children": [
+              {
+                "children": [
+                  { text: "小程序端采用uniapp框架编写，可作为开发模板，快速构建其他项目。" },
+                ],
+                "unordered-list-item": { level: 1 },
+              },
+              {
+                "unordered-list-item": { level: 1 },
+                "children": [{ text: "后端采用ThinkPHP编写接口，管理端使用Vue构建。" }],
+              },
+              {
+                "unordered-list-item": { level: 1 },
+                "children": [{ text: "使用swoole作为PHP常驻内存解决方案。" }],
+              },
+              {
+                "unordered-list-item": { level: 1 },
+                "children": [{ text: "实现了较为完整的微信支付流程与后台订单管理统计等。" }],
+              },
+            ],
+          },
+          { "unordered-list": true, "children": [{ children: [{ text: "" }] }] },
+        ],
+      },
+      children: [],
+      name: "rich-text",
+    },
+    {
+      id: "48ba8ea5-6d8e-4e4c-bf5c-4fc7fba9a263",
+      config: {
+        layout: {
+          w: 36,
+          h: 46,
+          x: 22,
+          y: 91,
+          i: "48ba8ea5-6d8e-4e4c-bf5c-4fc7fba9a263",
+          minW: 4,
+          minH: 2,
+          moved: false,
+          static: false,
+          isDraggable: true,
+          isResizable: true,
+        },
+      },
+      style: { fontSize: "12px" },
+      props: {
+        text: [
+          {
+            children: [{ text: "2019-03  至       今       山科小站小程序", bold: true }],
+            align: "justify",
+          },
+          {
+            "unordered-list": true,
+            "children": [
+              {
+                "children": [{ text: "项目地址: https://github.com/WindrunnerMax/SHST" }],
+                "unordered-list-item": { level: 1 },
+                "align": "justify",
+              },
+              {
+                "unordered-list-item": { level: 1 },
+                "children": [
+                  {
+                    text: "个人开发的校园小程序，累计用户4.4万，最高DAU1.7万，使用uniapp-cli框架编写，跨端编译到微信、QQ平台、安卓平台。",
+                  },
+                ],
+                "align": "justify",
+              },
+              {
+                "unordered-list-item": { level: 1 },
+                "children": [
+                  {
+                    text: "模块化与组件化构建，组件与模块均自行实现，其中有简单场景的表单组件用以验证表单内容合法性，也有小程序整体风格化的卡片组件、列表组件与加载组件等。",
+                  },
+                ],
+                "align": "justify",
+              },
+              {
+                "unordered-list-item": { level: 1 },
+                "children": [
+                  {
+                    text: "对于异步请求的方案，从最初各处调用小程序原生请求的写法，到后来封装统一的请求模块，再后来在保证兼容的同时逐渐过渡到Promise与async/await的方案，封装的请求模块组合了加载loading提示、节流、自动处理cookie等配置与功能。",
+                  },
+                ],
+                "align": "justify",
+              },
+              {
+                "unordered-list-item": { level: 1 },
+                "children": [
+                  {
+                    text: "对于页面间通信的方案，采用事件总线，实现订阅发布模式，后来由于key值太多变得难以管理，准备逐步过渡将key值统一在event-bus模块中进行枚举引用。 ",
+                  },
+                ],
+                "align": "justify",
+              },
+              {
+                "unordered-list-item": { level: 1 },
+                "children": [
+                  {
+                    text: "在小程序中内嵌webview，使用React+TS实现了新鲜事社区功能，通过github的webhook在推送后自动构建发布到服务器。 ",
+                  },
+                ],
+                "align": "justify",
+              },
+              {
+                "unordered-list-item": { level: 1 },
+                "children": [
+                  {
+                    text: "后端使用Thinkphp编写接口，封装HTTP请求类等统一处理爬虫请求，在小程序端也封装了正则处理模块，对部分爬虫进行本地化处理，减少服务器负载。 ",
+                  },
+                ],
+                "align": "justify",
+              },
+              {
+                "unordered-list-item": { level: 1 },
+                "children": [
+                  {
+                    text: "构建爬虫中间层，下游任务可以直接取用数据，对接外网与内网穿透服务器，多种数据获取方式用以备用切换容灾，借助redis实现异常信息超出阈值主动告警推送。",
+                  },
+                ],
+                "align": "justify",
+              },
+              {
+                "unordered-list-item": { level: 1 },
+                "children": [
+                  {
+                    text: "小程序正在渐进过渡到TS开发，现已将抽出的组件与模块迁移到TS，之后逐步过渡各个页面组件。",
+                  },
+                ],
+                "align": "justify",
+              },
+            ],
+          },
+          { "unordered-list": true, "children": [{ children: [{ text: "" }] }] },
+        ],
+      },
+      children: [],
+      name: "rich-text",
+    },
+    {
+      id: "7d5a6987-7027-416c-889b-149ddde63e0e",
+      config: {
+        layout: {
+          w: 36,
+          h: 17,
+          x: 22,
+          y: 60,
+          i: "7d5a6987-7027-416c-889b-149ddde63e0e",
+          minW: 4,
+          minH: 2,
+          moved: false,
+          static: false,
+          isDraggable: true,
+          isResizable: true,
+        },
+      },
+      style: { fontSize: "12px" },
+      props: {
+        text: [
+          {
+            children: [
+              { text: "2022-07 至       今        简历的注意事项", bold: true },
+              { text: " " },
+            ],
+            align: "justify",
+          },
+          {
+            "unordered-list": true,
+            "children": [
+              {
+                "unordered-list-item": { level: 1 },
+                "children": [
+                  { text: "实际上因为实现比较简单，所以需要手动编写一些`CSS`实现效果。" },
+                ],
+                "align": "justify",
+              },
+              {
+                "unordered-list-item": { level: 1 },
+                "children": [
+                  { text: "通过打印即`Ctrl + P`来实现导出`PDF`的效果，导出时需要注意: " },
+                ],
+                "align": "justify",
+              },
+              {
+                "unordered-list-item": { level: 2 },
+                "children": [
+                  {
+                    text: "简历是按照`A4`纸的大小固定的宽高，扩大编辑区域可能会造成简历多于一页。",
+                  },
+                ],
+                "align": "justify",
+              },
+              {
+                "unordered-list-item": { level: 2 },
+                "children": [
+                  { text: "需要设置纸张尺寸为`A4`、边距为无、选中背景图形选项完整导出一页简历。" },
+                ],
+                "align": "justify",
+              },
+              {
+                "unordered-list-item": { level: 1 },
+                "children": [
+                  {
+                    text: "初次打开页面时会加载示例简历。数据以`local storage`字符串的形式存储在本地，图片以`base64`存储所以占用存储空间可能会比较大。",
+                  },
+                ],
+                "align": "justify",
+              },
+            ],
+          },
         ],
       },
       children: [],

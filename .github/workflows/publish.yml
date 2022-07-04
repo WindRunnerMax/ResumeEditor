@@ -3,7 +3,7 @@ name: publish gh-page
 on:
   push:
     branches:
-      - main # do not start compilation temporarily (remote is master)
+      - master
 
 jobs:
   build-and-deploy:
