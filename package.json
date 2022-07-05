@@ -24,7 +24,7 @@
     "@types/uuid": "^8.3.4",
     "ahooks": "^3.3.13",
     "css2json": "^1.1.1",
-    "doc-editor-light": "^0.1.1",
+    "doc-editor-light": "^0.1.2",
     "immer": "^9.0.12",
     "lodash": "^4.17.21",
     "react": "^17.0.2",

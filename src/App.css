@@ -1,7 +1,6 @@
 @import './styles/asse.css';
 @import 'react-grid-layout/css/styles.css';
 @import 'react-resizable/css/styles.css';
-@import '@arco-design/web-react/dist/css/arco.css';
 
 body {
   --color-blue: #4c98f7;
