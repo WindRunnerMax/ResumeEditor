@@ -45,6 +45,7 @@ body {
 .resume-editor > .main-panel {
   background-color: #eee;
   flex: 1;
+  overflow: auto;
 }
 
 @media print {
@@ -59,5 +60,17 @@ body {
 
   .pedestal-main-container {
     margin: 0 auto !important;
+  }
+
+  .hover-menu-container,
+  .pedestal-main-item-toolbar {
+    display: none !important;
+  }
+
+  *:hover,
+  .pedestal-item-focus {
+    border: unset !important;
+    box-shadow: unset !important;
+    outline: unset !important;
   }
 }
