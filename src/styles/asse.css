@@ -9,9 +9,8 @@ body {
   --color-orange: #ff5722;
 
   box-sizing: border-box;
-  font-family: Arial, Helvetica, 'STHeiti STXihei', 'Microsoft YaHei', Tohoma, sans-serif;
-  font-size: 15px;
   margin: 0;
+  padding: 0;
 }
 
 /* section --- body page --- section */
