@@ -10,6 +10,7 @@ import { LocalComponentConfig } from "src/types/components-types";
 import { actions } from "src/store/actions";
 import ReferenceLine from "src/views/main-panel/components/reference-line";
 import { ToolBar } from "src/views/main-panel/components/tool-bar";
+import { ResizeObserverHOC } from "./components/reszie-observe";
 const ResponsiveGridLayout = WidthProvider(GridLayout);
 
 type PedestalMainProps = {
@@ -104,7 +105,7 @@ export const MainPanel: React.FC<PedestalMainProps> = props => {
             allowOverlap={allowOverlap}
             compactType={null} // 关闭垂直压实
             preventCollision // 关闭重新排列
-            // useCSSTransforms={false}
+            useCSSTransforms={false} // 在`ObserveResize`时会出现动画
           >
             {instance.children.map(item => {
               const componentInstance = getComponentInstanceSync(item.name);
@@ -126,7 +127,21 @@ export const MainPanel: React.FC<PedestalMainProps> = props => {
                     config={item}
                     cols={cols}
                   >
-                    <Component dispatch={dispatch} instance={item} isRender={isRender}></Component>
+                    {item.config.observeResize ? (
+                      <ResizeObserverHOC
+                        dispatch={dispatch}
+                        instance={item}
+                        isRender={isRender}
+                        component={Component}
+                        rowHeight={rowHeight}
+                      ></ResizeObserverHOC>
+                    ) : (
+                      <Component
+                        dispatch={dispatch}
+                        instance={item}
+                        isRender={isRender}
+                      ></Component>
+                    )}
                   </ToolBar>
                   <div
                     className="pedestal-drag-dot"

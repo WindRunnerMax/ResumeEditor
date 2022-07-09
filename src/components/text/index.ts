@@ -17,6 +17,7 @@ export const richText: LocalComponent = {
       minW: 4,
       minH: 2,
     },
+    observeResize: true,
   },
   module: {
     control: RichTextControl,

@@ -134,6 +134,7 @@ export const example: CLD = {
           isDraggable: true,
           isResizable: true,
         },
+        observeResize: true,
       },
       style: {},
       props: {
@@ -158,6 +159,7 @@ export const example: CLD = {
           isDraggable: true,
           isResizable: true,
         },
+        observeResize: true,
       },
       style: {},
       props: {
@@ -206,6 +208,7 @@ export const example: CLD = {
           isDraggable: true,
           isResizable: true,
         },
+        observeResize: true,
       },
       style: {},
       props: {
@@ -256,6 +259,7 @@ export const example: CLD = {
           isDraggable: true,
           isResizable: true,
         },
+        observeResize: true,
       },
       style: {},
       props: {
@@ -306,6 +310,7 @@ export const example: CLD = {
           isDraggable: true,
           isResizable: true,
         },
+        observeResize: true,
       },
       style: {},
       props: {
@@ -358,6 +363,7 @@ export const example: CLD = {
           isDraggable: true,
           isResizable: true,
         },
+        observeResize: true,
       },
       style: {},
       props: {
@@ -389,6 +395,7 @@ export const example: CLD = {
           isDraggable: true,
           isResizable: true,
         },
+        observeResize: true,
       },
       style: {},
       props: {
@@ -424,6 +431,7 @@ export const example: CLD = {
           isDraggable: true,
           isResizable: true,
         },
+        observeResize: true,
       },
       style: {},
       props: {
@@ -459,6 +467,7 @@ export const example: CLD = {
           isDraggable: true,
           isResizable: true,
         },
+        observeResize: true,
       },
       style: { border: "1px solid rgb(78,89,105)", borderRadius: "5px", padding: "3px 8px" },
       props: {
@@ -483,6 +492,7 @@ export const example: CLD = {
           isDraggable: true,
           isResizable: true,
         },
+        observeResize: true,
       },
       style: { border: "1px solid rgb(78,89,105)", borderRadius: "5px", padding: "3px 8px" },
       props: {
@@ -507,6 +517,7 @@ export const example: CLD = {
           isDraggable: true,
           isResizable: true,
         },
+        observeResize: true,
       },
       style: { border: "1px solid rgb(78,89,105)", borderRadius: "5px", padding: "3px 8px" },
       props: {
@@ -533,6 +544,7 @@ export const example: CLD = {
           isDraggable: true,
           isResizable: true,
         },
+        observeResize: true,
       },
       style: {},
       props: {
@@ -568,6 +580,7 @@ export const example: CLD = {
           isDraggable: true,
           isResizable: true,
         },
+        observeResize: true,
       },
       style: {},
       props: {
@@ -610,6 +623,7 @@ export const example: CLD = {
           isDraggable: true,
           isResizable: true,
         },
+        observeResize: true,
       },
       style: {},
       props: {
@@ -677,6 +691,7 @@ export const example: CLD = {
           isDraggable: true,
           isResizable: true,
         },
+        observeResize: true,
       },
       style: {},
       props: {
@@ -701,7 +716,7 @@ export const example: CLD = {
       config: {
         layout: {
           w: 15,
-          h: 4,
+          h: 5,
           x: 22,
           y: 21,
           i: "2965658b-b4d4-48ea-b865-1f84cb6e1c71",
@@ -712,6 +727,7 @@ export const example: CLD = {
           isDraggable: true,
           isResizable: true,
         },
+        observeResize: true,
       },
       style: {},
       props: {
@@ -747,6 +763,7 @@ export const example: CLD = {
           isDraggable: true,
           isResizable: true,
         },
+        observeResize: true,
       },
       style: {},
       props: {
@@ -785,7 +802,7 @@ export const example: CLD = {
           w: 15,
           h: 5,
           x: 22,
-          y: 37,
+          y: 36,
           i: "18d7832f-96aa-4948-aaaf-a136eda73feb",
           minW: 4,
           minH: 2,
@@ -794,6 +811,7 @@ export const example: CLD = {
           isDraggable: true,
           isResizable: true,
         },
+        observeResize: true,
       },
       style: {},
       props: {
@@ -820,7 +838,7 @@ export const example: CLD = {
           w: 37,
           h: 13,
           x: 22,
-          y: 42,
+          y: 41,
           i: "3dd34caf-2d60-492a-b16d-26deac1dbdc8",
           minW: 4,
           minH: 2,
@@ -829,6 +847,7 @@ export const example: CLD = {
           isDraggable: true,
           isResizable: true,
         },
+        observeResize: true,
       },
       style: {},
       props: {
@@ -885,7 +904,7 @@ export const example: CLD = {
           w: 15,
           h: 5,
           x: 22,
-          y: 55,
+          y: 54,
           i: "988d8bef-b36e-40ab-bfb1-35a6f83d73a2",
           minW: 4,
           minH: 2,
@@ -894,6 +913,7 @@ export const example: CLD = {
           isDraggable: true,
           isResizable: true,
         },
+        observeResize: true,
       },
       style: {},
       props: {
@@ -918,9 +938,9 @@ export const example: CLD = {
       config: {
         layout: {
           w: 36,
-          h: 12,
+          h: 13,
           x: 22,
-          y: 78,
+          y: 77,
           i: "43041699-1f40-464f-85fc-fe994cf999a7",
           minW: 4,
           minH: 2,
@@ -929,6 +949,7 @@ export const example: CLD = {
           isDraggable: true,
           isResizable: true,
         },
+        observeResize: true,
       },
       style: {},
       props: {
@@ -986,7 +1007,6 @@ export const example: CLD = {
               },
             ],
           },
-          { "unordered-list": true, "children": [{ children: [{ text: "" }] }] },
         ],
       },
       children: [],
@@ -1008,6 +1028,7 @@ export const example: CLD = {
           isDraggable: true,
           isResizable: true,
         },
+        observeResize: true,
       },
       style: {},
       props: {
@@ -1148,7 +1169,7 @@ export const example: CLD = {
           w: 36,
           h: 17,
           x: 22,
-          y: 60,
+          y: 59,
           i: "7d5a6987-7027-416c-889b-149ddde63e0e",
           minW: 4,
           minH: 2,
@@ -1157,6 +1178,7 @@ export const example: CLD = {
           isDraggable: true,
           isResizable: true,
         },
+        observeResize: true,
       },
       style: {},
       props: {
