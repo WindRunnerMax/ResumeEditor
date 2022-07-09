@@ -20,11 +20,12 @@ type PedestalMainProps = {
   allowOverlap: boolean;
 };
 export const MainPanel: React.FC<PedestalMainProps> = props => {
-  const { state, dispatch } = useContext(AppContext);
+  const { state, mode, dispatch } = useContext(AppContext);
   const instance = state.cld;
+  const isRender = mode === "render";
   const { rowHeight, cols, minHeight, allowOverlap } = props;
   const [dragging, setDragging] = useState(false);
-  const layouts = generateLayout(instance.children, cols);
+  const layouts = generateLayout(instance.children, cols, isRender);
 
   const layoutChange = (layouts: Layout[]) => {
     const idNodeMap = arrayMapper(instance.children, "id");
@@ -42,6 +43,7 @@ export const MainPanel: React.FC<PedestalMainProps> = props => {
     e: React.MouseEvent<HTMLDivElement, MouseEvent>,
     config?: LocalComponentConfig
   ) => {
+    if (isRender) return void 0;
     if (!config) {
       dispatch({ type: actions.SELECT_NODE, payload: { id: "", name: "" } });
       return void 0;
@@ -77,8 +79,13 @@ export const MainPanel: React.FC<PedestalMainProps> = props => {
 
   return (
     <div className={props.className} onClick={e => focusElement(e)}>
-      <div className="pedestal-main-container">
-        <ReferenceLine style={{ minHeight }} display={dragging} rows={rowHeight} cols={cols}>
+      <div className={cs("pedestal-main-container", isRender && "render-mode")}>
+        <ReferenceLine
+          style={{ minHeight }}
+          display={!isRender && dragging}
+          rows={rowHeight}
+          cols={cols}
+        >
           <ResponsiveGridLayout
             className="pedestal-responsive-grid-layout"
             style={{ minHeight }}
@@ -108,7 +115,7 @@ export const MainPanel: React.FC<PedestalMainProps> = props => {
                   id={item.id}
                   className={cs(
                     "pedestal-item",
-                    state.selectedNode.id === item.id && "pedestal-item-focus"
+                    !isRender && state.selectedNode.id === item.id && "pedestal-item-focus"
                   )}
                   key={item.id}
                   onClick={e => focusElement(e, item)}
@@ -119,7 +126,7 @@ export const MainPanel: React.FC<PedestalMainProps> = props => {
                     config={item}
                     cols={cols}
                   >
-                    <Component dispatch={dispatch} instance={item}></Component>
+                    <Component dispatch={dispatch} instance={item} isRender={isRender}></Component>
                   </ToolBar>
                   <div
                     className="pedestal-drag-dot"

@@ -38,9 +38,15 @@
 .pedestal-main-container {
   background-color: #fff;
   color: var(--color-text-2);
-  height: 296mm;
   margin: 10px auto;
+  min-height: 296mm;
   width: 210mm;
+}
+
+.render-mode .pedestal-item {
+  &:hover {
+    box-shadow: unset;
+  }
 }
 
 .pedestal {

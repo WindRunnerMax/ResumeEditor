@@ -25,12 +25,18 @@ const initLayout: InitLayout = {
   minH: 1,
 };
 
-export const generateLayout = (instances: LocalComponentConfig[], cols: number): Layout[] => {
+export const generateLayout = (
+  instances: LocalComponentConfig[],
+  cols: number,
+  isRender?: boolean
+): Layout[] => {
   return instances.map(item => {
     const defaultLayout: Layout = { i: item.id, ...initLayout };
     if (item.config.layout) {
       const configLayout: Layout = item.config.layout as Layout;
       const layout = { ...defaultLayout, ...configLayout };
+      layout.isDraggable = !isRender;
+      layout.isResizable = !isRender;
 
       // 当网格调整时需要重新计算大小
       const x = layout.x;

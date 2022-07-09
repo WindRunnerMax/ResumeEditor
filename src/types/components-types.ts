@@ -10,6 +10,7 @@ export interface Panel {
   main: React.FC<{
     dispatch: ContextDispatch;
     instance: LocalComponentConfig;
+    isRender: boolean;
     [key: string]: unknown;
   }>; // 主面板
   editor: React.FC<{

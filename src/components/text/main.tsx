@@ -11,19 +11,20 @@ import {
   BoldPlugin,
   DividingLinePlugin,
   HeadingPlugin,
-  HighlightBlockPlugin,
   HyperLinkPlugin,
   InlineCodePlugin,
   ItalicPlugin,
   MenuToolBar,
-  orderedListPlugin,
+  OrderedListPlugin,
   ParagraphPlugin,
   QuoteBlockPlugin,
   ShortCutPlugin,
   StrikeThroughPlugin,
   UnderLinePlugin,
-  unorderedListPlugin,
+  UnorderedListPlugin,
   SlatePlugins,
+  FontBasePlugin,
+  LineHeightPlugin,
 } from "doc-editor-light";
 import { useMemoizedFn } from "ahooks";
 import { debounce } from "lodash";
@@ -34,6 +35,7 @@ export const RichText: FC<{
   className?: string;
   instance: LocalComponentConfig;
   dispatch: ContextDispatch;
+  isRender: boolean;
 }> = props => {
   const editor = useMemo(() => withHistory(withReact(createEditor())), []);
 
@@ -56,35 +58,36 @@ export const RichText: FC<{
       HeadingPlugin(editor),
       BoldPlugin(),
       QuoteBlockPlugin(editor),
-      HyperLinkPlugin(editor, false),
+      HyperLinkPlugin(editor, props.isRender),
       UnderLinePlugin(),
       StrikeThroughPlugin(),
       ItalicPlugin(),
       InlineCodePlugin(),
-      orderedListPlugin(editor),
-      unorderedListPlugin(editor),
+      OrderedListPlugin(editor),
+      UnorderedListPlugin(editor),
       DividingLinePlugin(),
       AlignPlugin(),
-      HighlightBlockPlugin(editor, false)
+      FontBasePlugin(),
+      LineHeightPlugin()
     );
 
     const commands = register.getCommands();
     register.add(ShortCutPlugin(editor, commands));
 
     return register.apply();
-  }, [editor]);
+  }, [editor, props.isRender]);
 
   const withVoidEditor = useMemo(() => withVoidElements(editor), [editor, withVoidElements]);
   return (
     <div className={classes("pedestal-text", props.className)} style={props.instance.style}>
       <Slate editor={withVoidEditor} value={initText} onChange={updateText}>
         <div onClick={e => e.stopPropagation()}>
-          <MenuToolBar isRender={false} commands={commands}></MenuToolBar>
+          <MenuToolBar isRender={props.isRender} commands={commands}></MenuToolBar>
         </div>
         <Editable
           renderElement={renderElement}
           renderLeaf={renderLeaf}
-          readOnly={false}
+          readOnly={props.isRender}
           placeholder="Enter text ..."
           onKeyDown={onKeyDown}
         />

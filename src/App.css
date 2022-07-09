@@ -55,7 +55,7 @@ body {
 
   .resume-editor > .main-panel {
     background-color: #fff !important;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .pedestal-main-container {
