@@ -53,7 +53,7 @@
   &-item {
     box-sizing: border-box;
     display: inline-block;
-    overflow: hidden;
+    overflow: visible;
   }
 
   &-item:hover {

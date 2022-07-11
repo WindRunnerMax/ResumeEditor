@@ -21,7 +21,7 @@ export const ResizeObserverHOC: FC<{
     if (!size.height || !props.instance.config.layout) return void 0;
     const layout = props.instance.config.layout as Layout;
     const rows = Math.ceil(size.height / props.rowHeight);
-    if (layout.h >= rows) return void 0;
+    if (layout.h === rows) return void 0;
     props.dispatch({
       type: actions.UPDATE_ONE,
       payload: { id: props.instance.id, key: "config.layout.h", data: rows },
