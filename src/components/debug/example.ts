@@ -11,7 +11,7 @@ export const example: CLD = {
           w: 18,
           h: 1,
           x: 1,
-          y: 1,
+          y: 2,
           i: "25d349f3-60bf-4425-b58d-726cafe2c1fd",
           minW: 1,
           minH: 1,
@@ -22,7 +22,7 @@ export const example: CLD = {
         },
       },
       style: { backgroundColor: "rgb(var(--blue-6))", height: 7 },
-      props: { src: "./favicon.ico" },
+      props: {},
       children: [],
       name: "blank",
     },
@@ -33,7 +33,7 @@ export const example: CLD = {
           w: 37,
           h: 1,
           x: 22,
-          y: 1,
+          y: 2,
           i: "094ea4b6-2f58-497f-8007-d5d36239b7ef",
           minW: 1,
           minH: 1,
@@ -44,7 +44,7 @@ export const example: CLD = {
         },
       },
       style: { backgroundColor: "rgb(var(--blue-6))", height: 7 },
-      props: { src: "./favicon.ico" },
+      props: {},
       children: [],
       name: "blank",
     },
@@ -422,7 +422,7 @@ export const example: CLD = {
           w: 15,
           h: 5,
           x: 2,
-          y: 74,
+          y: 75,
           i: "0e7070a4-5e44-4e44-bfa5-db8363710285",
           minW: 4,
           minH: 2,
@@ -456,7 +456,7 @@ export const example: CLD = {
       config: {
         layout: {
           w: 4,
-          h: 5,
+          h: 4,
           x: 2,
           y: 81,
           i: "60b24a69-a72c-4315-bb4d-ab7522f101de",
@@ -481,7 +481,7 @@ export const example: CLD = {
       config: {
         layout: {
           w: 4,
-          h: 5,
+          h: 4,
           x: 7,
           y: 81,
           i: "42337159-f7f5-4464-b5a7-b08c0bfa5a5d",
@@ -506,7 +506,7 @@ export const example: CLD = {
       config: {
         layout: {
           w: 6,
-          h: 5,
+          h: 4,
           x: 12,
           y: 81,
           i: "580b67c7-fcf6-41e9-803d-d97d7efe57cd",
@@ -535,7 +535,7 @@ export const example: CLD = {
           w: 15,
           h: 5,
           x: 2,
-          y: 88,
+          y: 89,
           i: "e651bd15-409b-40a6-9735-9cfb0576716c",
           minW: 4,
           minH: 2,
@@ -552,7 +552,7 @@ export const example: CLD = {
           {
             children: [
               {
-                "text": "自我介绍",
+                "text": "奖项荣誉",
                 "bold": true,
                 "font-base": { fontSize: 23, color: "rgb(var(--blue-6))" },
               },
@@ -571,7 +571,7 @@ export const example: CLD = {
           w: 18,
           h: 14,
           x: 2,
-          y: 94,
+          y: 112,
           i: "b05d83dd-2712-4548-ae01-77fd18acdae9",
           minW: 4,
           minH: 2,
@@ -612,9 +612,9 @@ export const example: CLD = {
       config: {
         layout: {
           w: 33,
-          h: 13,
+          h: 5,
           x: 22,
-          y: 8,
+          y: 10,
           i: "8398eec9-f878-4baf-bf32-f00a9995ad2b",
           minW: 4,
           minH: 2,
@@ -648,28 +648,6 @@ export const example: CLD = {
             ],
             "line-height": 1.4,
           },
-          {
-            "children": [
-              { "text": "奖项荣誉:   ", "bold": true, "font-base": { fontSize: 12 } },
-              { "text": "中国软件杯国赛一等奖", "font-base": { fontSize: 12 } },
-            ],
-            "line-height": 1.4,
-          },
-          {
-            "children": [
-              { "text": "                   蓝桥杯Java国赛三等奖 ", "font-base": { fontSize: 12 } },
-            ],
-            "line-height": 1.4,
-          },
-          {
-            "children": [
-              {
-                "text": "                   微信小程序开发大赛华东赛区二等奖",
-                "font-base": { fontSize: 12 },
-              },
-            ],
-            "line-height": 1.4,
-          },
         ],
       },
       children: [],
@@ -682,7 +660,7 @@ export const example: CLD = {
           w: 15,
           h: 5,
           x: 22,
-          y: 3,
+          y: 5,
           i: "9da35056-0867-4eaf-9ade-1beb9e688e56",
           minW: 4,
           minH: 2,
@@ -718,7 +696,7 @@ export const example: CLD = {
           w: 15,
           h: 5,
           x: 22,
-          y: 21,
+          y: 18,
           i: "2965658b-b4d4-48ea-b865-1f84cb6e1c71",
           minW: 4,
           minH: 2,
@@ -754,7 +732,7 @@ export const example: CLD = {
           w: 36,
           h: 10,
           x: 22,
-          y: 26,
+          y: 23,
           i: "43b795d3-c84e-40db-99d9-f7ab68d4b75f",
           minW: 4,
           minH: 2,
@@ -836,7 +814,7 @@ export const example: CLD = {
       config: {
         layout: {
           w: 37,
-          h: 13,
+          h: 14,
           x: 22,
           y: 41,
           i: "3dd34caf-2d60-492a-b16d-26deac1dbdc8",
@@ -858,15 +836,15 @@ export const example: CLD = {
               { "text": "HTML、CSS、JavaScript、PHP", "font-base": { fontSize: 12 } },
             ],
             "align": "justify",
-            "line-height": 1.4,
+            "line-height": 1.5,
           },
           {
             "align": "justify",
             "children": [
               { "text": "熟悉：", "bold": true, "font-base": { fontSize: 12 } },
-              { "text": "Vue.js、uniapp、小程序、ThinkPHP", "font-base": { fontSize: 12 } },
+              { "text": "Vue、React、uniapp、ThinkPHP", "font-base": { fontSize: 12 } },
             ],
-            "line-height": 1.4,
+            "line-height": 1.5,
           },
           {
             "align": "justify",
@@ -874,23 +852,33 @@ export const example: CLD = {
               { "text": "了解：", "bold": true, "font-base": { fontSize: 12 } },
               { "text": "React、Python、Java、Weex", "font-base": { fontSize: 12 } },
             ],
-            "line-height": 1.4,
+            "line-height": 1.5,
           },
           {
             "align": "justify",
             "children": [
               { "text": "Blog: ", "bold": true, "font-base": { fontSize: 12 } },
-              { "text": "https://blog.touchczy.top/ ", "font-base": { fontSize: 12 } },
+              {
+                "text": "https://blog.touchczy.top/",
+                "font-base": { fontSize: 12 },
+                "link": { href: "https://blog.touchczy.top/", blank: true },
+              },
+              { "font-base": { fontSize: 12 }, "text": "   (440篇博客)" },
             ],
-            "line-height": 1.4,
+            "line-height": 1.5,
           },
           {
             "align": "justify",
             "children": [
               { "text": "Github: ", "bold": true, "font-base": { fontSize: 12 } },
-              { "text": "https://github.com/WindrunnerMax/", "font-base": { fontSize: 12 } },
+              {
+                "text": "https://github.com/WindrunnerMax/",
+                "font-base": { fontSize: 12 },
+                "link": { href: "https://github.com/WindrunnerMax/", blank: true },
+              },
+              { "font-base": { fontSize: 12 }, "text": "   (1.7k star) " },
             ],
-            "line-height": 1.4,
+            "line-height": 1.5,
           },
         ],
       },
@@ -904,7 +892,7 @@ export const example: CLD = {
           w: 15,
           h: 5,
           x: 22,
-          y: 54,
+          y: 57,
           i: "988d8bef-b36e-40ab-bfb1-35a6f83d73a2",
           minW: 4,
           minH: 2,
@@ -938,9 +926,9 @@ export const example: CLD = {
       config: {
         layout: {
           w: 36,
-          h: 13,
+          h: 12,
           x: 22,
-          y: 77,
+          y: 81,
           i: "43041699-1f40-464f-85fc-fe994cf999a7",
           minW: 4,
           minH: 2,
@@ -1017,9 +1005,9 @@ export const example: CLD = {
       config: {
         layout: {
           w: 36,
-          h: 46,
+          h: 41,
           x: 22,
-          y: 91,
+          y: 95,
           i: "48ba8ea5-6d8e-4e4c-bf5c-4fc7fba9a263",
           minW: 4,
           minH: 2,
@@ -1048,27 +1036,27 @@ export const example: CLD = {
             "unordered-list": true,
             "children": [
               {
+                "unordered-list": true,
                 "children": [
                   {
-                    "text": "项目地址: https://github.com/WindrunnerMax/SHST",
-                    "font-base": { fontSize: 12 },
+                    "children": [
+                      {
+                        "text":
+                          "个人开发的校园小程序，累计用户4.4万，最高DAU1.7万，使用uniapp-cli框架编写，跨端编译到微信、QQ平台、安卓平台，",
+                        "font-base": { fontSize: 12 },
+                      },
+                      {
+                        "font-base": { fontSize: 12 },
+                        "text": "项目地址",
+                        "link": { href: "https://github.com/WindrunnerMax/SHST", blank: true },
+                      },
+                      { "font-base": { fontSize: 12 }, "text": "。" },
+                    ],
+                    "unordered-list-item": { level: 1 },
+                    "align": "justify",
+                    "line-height": 1.2,
                   },
                 ],
-                "unordered-list-item": { level: 1 },
-                "align": "justify",
-                "line-height": 1.2,
-              },
-              {
-                "unordered-list-item": { level: 1 },
-                "children": [
-                  {
-                    "text":
-                      "个人开发的校园小程序，累计用户4.4万，最高DAU1.7万，使用uniapp-cli框架编写，跨端编译到微信、QQ平台、安卓平台。",
-                    "font-base": { fontSize: 12 },
-                  },
-                ],
-                "align": "justify",
-                "line-height": 1.2,
               },
               {
                 "unordered-list-item": { level: 1 },
@@ -1156,7 +1144,6 @@ export const example: CLD = {
               },
             ],
           },
-          { "unordered-list": true, "children": [{ children: [{ text: "" }] }] },
         ],
       },
       children: [],
@@ -1169,7 +1156,7 @@ export const example: CLD = {
           w: 36,
           h: 17,
           x: 22,
-          y: 59,
+          y: 62,
           i: "7d5a6987-7027-416c-889b-149ddde63e0e",
           minW: 4,
           minH: 2,
@@ -1255,6 +1242,88 @@ export const example: CLD = {
                 "align": "justify",
                 "line-height": 1.2,
               },
+            ],
+          },
+        ],
+      },
+      children: [],
+      name: "rich-text",
+    },
+    {
+      id: "468e71d3-b79f-40a0-8b50-e9791e1bbca9",
+      config: {
+        layout: {
+          w: 15,
+          h: 5,
+          x: 2,
+          y: 107,
+          i: "468e71d3-b79f-40a0-8b50-e9791e1bbca9",
+          minW: 4,
+          minH: 2,
+          moved: false,
+          static: false,
+          isDraggable: true,
+          isResizable: true,
+        },
+        observeResize: true,
+      },
+      style: {},
+      props: {
+        text: [
+          {
+            children: [
+              {
+                "text": "自我介绍",
+                "bold": true,
+                "font-base": { fontSize: 23, color: "rgb(var(--blue-6))" },
+              },
+            ],
+            align: "left",
+          },
+        ],
+      },
+      children: [],
+      name: "rich-text",
+    },
+    {
+      id: "d99d3b48-15a9-45e2-b163-3f5b98658292",
+      config: {
+        layout: {
+          w: 17,
+          h: 10,
+          x: 2,
+          y: 94,
+          i: "d99d3b48-15a9-45e2-b163-3f5b98658292",
+          minW: 4,
+          minH: 2,
+          moved: false,
+          static: false,
+          isDraggable: true,
+          isResizable: true,
+        },
+        observeResize: true,
+      },
+      style: {},
+      props: {
+        text: [
+          {
+            "children": [{ "text": "中国软件杯国赛一等奖", "font-base": { fontSize: 12 } }],
+            "line-height": 1.4,
+          },
+          {
+            "children": [{ "text": "蓝桥杯Java国赛三等奖 ", "font-base": { fontSize: 12 } }],
+            "line-height": 1.4,
+          },
+          {
+            "children": [
+              { "text": "微信小程序开发大赛华东赛区二等奖", "font-base": { fontSize: 12 } },
+            ],
+            "line-height": 1.4,
+          },
+          {
+            "line-height": 1.4,
+            "children": [
+              { "font-base": { fontSize: 12 }, "text": "数创杯全国大学生数学建模大赛二等奖" },
             ],
           },
         ],
