@@ -4,9 +4,6 @@ import { BlankEditor } from "./editor";
 import { BlankMain } from "./main";
 export const blank: LocalComponent = {
   name: "blank" as const,
-  props: {
-    src: "./favicon.ico",
-  },
   config: {
     layout: {
       x: 0,

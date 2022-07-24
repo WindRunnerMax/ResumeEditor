@@ -5,7 +5,6 @@ import { RichText } from "./main";
 
 export const richText: LocalComponent = {
   name: "rich-text" as const,
-  props: {},
   config: {
     layout: {
       x: 0,
