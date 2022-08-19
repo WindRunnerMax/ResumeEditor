@@ -32,25 +32,25 @@ export const EditorPanel: React.FC<{
   return (
     <div className={props.className}>
       <div className="view-editor-panel">
-        <div className="view-container-title a-y-center a-flex-space-between">
+        <div className="view-container-title">
           <div>
             <IconEdit style={{ fontSize: 18 }} />
             <span className="a-ml">编辑</span>
           </div>
-          <div>
-            <Link type="text" onClick={props.exportPDF}>
-              导出PDF
-            </Link>
-            <Popover
-              title="注意"
-              position="right"
-              content={<span>请关注右侧的简历导出注意事项</span>}
-            >
-              <Button size="mini" type="text" icon={<IconQuestionCircle />}></Button>
-            </Popover>
-          </div>
         </div>
-        <div className="view-container-body">{EditorPanel}</div>
+        <div className="view-container-body">
+          {EditorPanel || (
+            <div>
+              <Link
+                target="_blank"
+                href="https://github.com/WindrunnerMax/ResumeEditor#%E5%AF%BC%E5%87%BApdf"
+              >
+                使用必读
+              </Link>
+              <Link onClick={props.exportPDF}>导出PDF</Link>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

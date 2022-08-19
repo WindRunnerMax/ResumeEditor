@@ -24,12 +24,7 @@ export default () => {
     <div className="resume-editor">
       <AppProvider mode={isRender ? "render" : "editor"}>
         <Debug></Debug>
-        <div className="operate-panel">
-          <div className="fixed-panel">
-            <ControlPanel className="control-panel"></ControlPanel>
-            <EditorPanel className="editor-panel" exportPDF={exportPDF}></EditorPanel>
-          </div>
-        </div>
+        <ControlPanel className="control-panel"></ControlPanel>
         <MainPanel
           className="main-panel"
           rowHeight={8}
@@ -37,6 +32,7 @@ export default () => {
           minHeight="296mm"
           allowOverlap={false}
         ></MainPanel>
+        <EditorPanel className="editor-panel" exportPDF={exportPDF}></EditorPanel>
       </AppProvider>
     </div>
   );

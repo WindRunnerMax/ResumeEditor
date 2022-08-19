@@ -20,26 +20,10 @@ body {
   width: 100vw;
 }
 
-.resume-editor > .operate-panel {
-  border-right: 1px solid #eee;
+.resume-editor > .control-panel,
+.resume-editor > .editor-panel {
   flex-shrink: 0;
   width: 230px;
-}
-
-.resume-editor > .operate-panel > .fixed-panel {
-  height: 100vh;
-  position: fixed;
-  width: 230px;
-}
-
-.operate-panel .control-panel,
-.operate-panel .editor-panel {
-  height: 50%;
-  width: 100%;
-}
-
-.operate-panel .editor-panel {
-  border-top: 1px solid #eee;
 }
 
 .resume-editor > .main-panel {
@@ -49,7 +33,8 @@ body {
 }
 
 @media print {
-  .resume-editor > .operate-panel {
+  .resume-editor > .control-panel,
+  .resume-editor > .editor-panel {
     display: none !important;
   }
 
