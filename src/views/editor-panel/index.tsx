@@ -1,10 +1,10 @@
 import "../index.scss";
-import { IconEdit, IconQuestionCircle } from "@arco-design/web-react/icon";
+import { IconEdit } from "@arco-design/web-react/icon";
 import { useContext, useMemo } from "react";
 import { AppContext } from "src/store/context";
 import { getComponentInstanceSync } from "src/utils/components-utils";
 import { CustomCSS } from "./components/custom-css";
-import { Button, Link, Popover } from "@arco-design/web-react";
+import { Link } from "@arco-design/web-react";
 
 export const EditorPanel: React.FC<{
   className: string;

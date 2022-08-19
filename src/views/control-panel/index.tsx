@@ -35,8 +35,9 @@ export const ControlPanel: React.FC<{ className: string }> = props => {
       <div className="view-control-panel">
         <div className="view-container-title a-y-center">
           <IconMindMapping style={{ fontSize: 18 }} />
-          <span className="a-ml">组件</span>
+          <span className="a-ml">预设</span>
         </div>
+        <div className="sub-title">组件</div>
         <div className="view-container-body pedestal-control-container">
           {controls.map((config, index) => (
             <div key={index} className="control-button-container">
