@@ -19,9 +19,27 @@
   .template-container {
     margin: 10px;
 
-    > div {
+    .template-item {
+      align-items: center;
       cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       margin: 5px 0;
+
+      > .img-container {
+        border: 6px solid var(--color-border-1);
+        display: flex;
+        height: 60px;
+        justify-content: center;
+        margin: 5px 10px;
+        padding: 3px;
+        width: 60%;
+      }
+
+      img {
+        height: 100%;
+      }
     }
   }
 }

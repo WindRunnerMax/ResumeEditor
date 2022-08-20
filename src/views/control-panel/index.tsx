@@ -86,8 +86,14 @@ export const ControlPanel: React.FC<{ className: string }> = props => {
         <div className="sub-title">模版</div>
         <div className="template-container">
           {templateConfig.map((item, index) => (
-            <div key={index} onClick={() => loadTemplateConfig(item.template)}>
-              {item.label}
+            <div
+              key={index}
+              onClick={() => loadTemplateConfig(item.template)}
+              className="template-item"
+            >
+              <div className="img-container">
+                <img src={item.label}></img>
+              </div>
               <div>{item.name}</div>
             </div>
           ))}
