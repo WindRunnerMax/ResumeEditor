@@ -5,7 +5,6 @@ import { AppContext } from "src/store/context";
 import { CLD } from "src/store/reducer";
 import storage from "src/utils/common/storage";
 import { debounce } from "lodash";
-import { example } from "./example";
 
 const delay = debounce((fn: () => void) => fn(), 500);
 
@@ -15,10 +14,12 @@ const Debug: React.FC = () => {
   useEffect(() => {
     const storageCLD = storage("l").get<CLD>("cld");
     console.log("load cld from storage", storageCLD);
-    dispatch({
-      type: actions.INIT_STATE,
-      payload: storageCLD || example,
-    });
+    if (storageCLD) {
+      dispatch({
+        type: actions.INIT_STATE,
+        payload: storageCLD,
+      });
+    }
   }, [dispatch]);
 
   useUpdateEffect(() => {

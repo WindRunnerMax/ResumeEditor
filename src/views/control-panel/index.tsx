@@ -1,5 +1,5 @@
 import "../index.scss";
-import { useContext, useMemo } from "react";
+import { useContext, useMemo, useState } from "react";
 import { actions } from "src/store/actions";
 import { AppContext } from "src/store/context";
 import { components } from "src/utils/components-loader";
@@ -9,8 +9,12 @@ import { isEmptyValue } from "src/utils/common/is";
 import { useMemoizedFn } from "ahooks";
 import React from "react";
 import { LocalComponentConfig } from "src/types/components-types";
+import { templateConfig, templateLoader } from "src/utils/template-loader";
+import { Message, Modal } from "@arco-design/web-react";
+import { CLD } from "src/store/reducer";
 
 export const ControlPanel: React.FC<{ className: string }> = props => {
+  const [loading, setLoading] = useState(false);
   const { state, dispatch } = useContext(AppContext);
   const controls = components.map(item => item.module.control);
 
@@ -30,9 +34,29 @@ export const ControlPanel: React.FC<{ className: string }> = props => {
     dispatch({ type: actions.SELECT_NODE, payload: { id: cld.id, name: cld.name } });
   });
 
+  const loadTemplateConfig = useMemoizedFn((src: string) => {
+    Modal.confirm({
+      title: "警告",
+      content: "确定要加载模版吗，当前的数据将会被覆盖。",
+      confirmLoading: loading,
+      onConfirm: async () => {
+        setLoading(true);
+        const res: CLD | null = await templateLoader(src);
+        setLoading(false);
+        if (!res) return Message.error("模版加载失败");
+        res.user = "Czy";
+        res.date = new Date();
+        dispatch({
+          type: actions.INIT_STATE,
+          payload: res,
+        });
+      },
+    });
+  });
+
   const renderControl = useMemo(
     () => (
-      <div className="view-control-panel">
+      <>
         <div className="view-container-title a-y-center">
           <IconMindMapping style={{ fontSize: 18 }} />
           <span className="a-ml">预设</span>
@@ -51,9 +75,34 @@ export const ControlPanel: React.FC<{ className: string }> = props => {
             </div>
           ))}
         </div>
-      </div>
+      </>
     ),
     [addSection, controls]
   );
-  return <div className={props.className}>{renderControl}</div>;
+
+  const templateControl = useMemo(
+    () => (
+      <>
+        <div className="sub-title">模版</div>
+        <div className="template-container">
+          {templateConfig.map((item, index) => (
+            <div key={index} onClick={() => loadTemplateConfig(item.template)}>
+              {item.label}
+              <div>{item.name}</div>
+            </div>
+          ))}
+        </div>
+      </>
+    ),
+    [loadTemplateConfig]
+  );
+
+  return (
+    <div className={props.className}>
+      <div className="view-control-panel">
+        {renderControl}
+        {templateControl}
+      </div>
+    </div>
+  );
 };

@@ -40,7 +40,7 @@ export const EditorPanel: React.FC<{
         </div>
         <div className="view-container-body">
           {EditorPanel || (
-            <div>
+            <>
               <Link
                 target="_blank"
                 href="https://github.com/WindrunnerMax/ResumeEditor#%E5%AF%BC%E5%87%BApdf"
@@ -48,7 +48,7 @@ export const EditorPanel: React.FC<{
                 使用必读
               </Link>
               <Link onClick={props.exportPDF}>导出PDF</Link>
-            </div>
+            </>
           )}
         </div>
       </div>
