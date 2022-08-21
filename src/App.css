@@ -33,6 +33,12 @@ body {
 }
 
 @media print {
+  .resume-editor {
+    display: inline-block;
+    min-height: auto;
+    width: auto;
+  }
+
   .resume-editor > .control-panel,
   .resume-editor > .editor-panel {
     display: none !important;
