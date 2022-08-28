@@ -49,10 +49,7 @@ export const MainPanel: React.FC<PedestalMainProps> = props => {
       dispatch({ type: actions.SELECT_NODE, payload: { id: "", name: "" } });
       return void 0;
     }
-    if (config.id === state.selectedNode.id) {
-      // 再点击一次则取消选中
-      dispatch({ type: actions.SELECT_NODE, payload: { id: "", name: "" } });
-    } else {
+    if (config.id !== state.selectedNode.id) {
       dispatch({
         type: actions.SELECT_NODE,
         payload: { id: config.id, name: config.name },
