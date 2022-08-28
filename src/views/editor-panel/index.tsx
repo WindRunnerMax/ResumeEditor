@@ -41,6 +41,9 @@ export const EditorPanel: React.FC<{
         <div className="view-container-body">
           {EditorPanel || (
             <>
+              <Link target="_blank" href="https://github.com/WindrunnerMax/ResumeEditor">
+                Github
+              </Link>
               <Link
                 target="_blank"
                 href="https://github.com/WindrunnerMax/ResumeEditor#%E5%AF%BC%E5%87%BApdf"
