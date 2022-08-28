@@ -19,6 +19,7 @@ export const ToolBar: React.FC<{
 
   const deleteBaseSection = () => {
     dispatch({ type: actions.DELETE_ONE_BY_UUID, payload: config.id });
+    dispatch({ type: actions.SELECT_NODE, payload: { id: "", name: "" } });
   };
 
   const toCenterBaseSection = () => {
