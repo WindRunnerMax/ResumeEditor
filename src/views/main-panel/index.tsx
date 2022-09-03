@@ -60,8 +60,6 @@ export const MainPanel: React.FC<PedestalMainProps> = props => {
   };
 
   const dragStart = () => {
-    // 开始拖动的时候取消选中元素
-    dispatch({ type: actions.SELECT_NODE, payload: { id: "", name: "" } });
     setDragging(true);
   };
 
@@ -143,11 +141,7 @@ export const MainPanel: React.FC<PedestalMainProps> = props => {
                           ></Component>
                         )}
                       </ToolBar>
-                      <div
-                        className="pedestal-drag-dot"
-                        onClick={e => e.stopPropagation()}
-                        onMouseUp={dragStop}
-                      >
+                      <div className="pedestal-drag-dot" onMouseUp={dragStop}>
                         <IconDragDot />
                       </div>
                     </div>
