@@ -23,3 +23,15 @@ export function isPlainNumber(value: unknown): value is number {
 export function isString(value: unknown): value is string {
   return opt.call(value) === "[object String]";
 }
+
+export function isMobile() {
+  if (
+    navigator.userAgent.match(
+      /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+    )
+  ) {
+    return true;
+  }
+  if (document.body.clientWidth < 800) return true;
+  return false;
+}

@@ -1,0 +1,39 @@
+.mobile- {
+  &resume-editor {
+    height: 100vh;
+  }
+
+  &control-panel {
+    .view-control-panel {
+      border-bottom: 1px solid #eee;
+      border-right: unset;
+      position: static;
+      width: 100%;
+    }
+
+    .view-container-title,
+    .sub-title,
+    .view-container-body {
+      display: none;
+    }
+
+    .template-container {
+      display: flex;
+      height: 150px;
+      margin: 0;
+      overflow-y: auto;
+      width: 100%;
+
+      .template-item {
+        margin: 10px;
+        width: 80px;
+      }
+    }
+  }
+
+  &main-panel {
+    height: calc(100vh - 150px);
+    overflow: auto;
+    width: 100%;
+  }
+}

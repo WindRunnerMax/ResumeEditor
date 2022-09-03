@@ -6,6 +6,8 @@ import { MainPanel } from "./views/main-panel";
 import { AppProvider } from "./store/context";
 import "./styles/asse-style.scss";
 import { useEffect, useState } from "react";
+import { isMobile } from "./utils/common/is";
+import { MobilePreview } from "./views/mobile-preview";
 
 export default () => {
   const [isRender, setIsRender] = useState(false);
@@ -19,6 +21,8 @@ export default () => {
   const exportPDF = () => {
     setIsRender(true);
   };
+
+  if (isMobile()) return <MobilePreview></MobilePreview>;
 
   return (
     <div className="resume-editor">
