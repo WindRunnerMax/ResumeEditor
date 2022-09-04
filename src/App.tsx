@@ -5,24 +5,30 @@ import { EditorPanel } from "./views/editor-panel";
 import { MainPanel } from "./views/main-panel";
 import { AppProvider } from "./store/context";
 import "./styles/asse-style.scss";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { isMobile } from "./utils/common/is";
 import { MobilePreview } from "./views/mobile-preview";
+import { useUpdateEffect } from "./hooks/useUpdateEffect";
+import { ResumePreview } from "./views/preview";
+
+const isPreview = new URL(location.href).searchParams.get("preview") !== null;
 
 export default () => {
   const [isRender, setIsRender] = useState(false);
 
-  useEffect(() => {
+  useUpdateEffect(() => {
     if (isRender) {
       window.print();
       setIsRender(false);
     }
   }, [isRender]);
+
   const exportPDF = () => {
     setIsRender(true);
   };
 
   if (isMobile()) return <MobilePreview></MobilePreview>;
+  if (isPreview) return <ResumePreview></ResumePreview>;
 
   return (
     <div className="resume-editor">
