@@ -1,4 +1,4 @@
-import "../index.scss";
+import "./index.scss";
 import { IconDragDot } from "@arco-design/web-react/icon";
 import { useContext, useState } from "react";
 import { AppContext } from "src/store/context";

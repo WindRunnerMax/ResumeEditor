@@ -1,4 +1,4 @@
-import "../index.scss";
+import "./index.scss";
 import { IconEdit } from "@arco-design/web-react/icon";
 import { useContext, useMemo } from "react";
 import { AppContext } from "src/store/context";

@@ -1,4 +1,4 @@
-import "../index.scss";
+import "./index.scss";
 import { useContext, useMemo, useState } from "react";
 import { actions } from "src/store/actions";
 import { AppContext } from "src/store/context";
