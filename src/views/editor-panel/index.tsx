@@ -43,7 +43,7 @@ export const EditorPanel: React.FC<{
             <>
               <div>
                 <Link target="_blank" href="https://github.com/WindrunnerMax/ResumeEditor">
-                  Github
+                  Github地址
                 </Link>
                 <Link
                   target="_blank"
@@ -55,6 +55,9 @@ export const EditorPanel: React.FC<{
               <div>
                 <Link href="?preview" target="_blank">
                   实时预览
+                </Link>
+                <Link href="?json" target="_blank">
+                  JSON编辑
                 </Link>
                 <Link onClick={props.exportPDF}>导出PDF</Link>
               </div>

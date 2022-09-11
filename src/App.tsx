@@ -10,8 +10,10 @@ import { isMobile } from "./utils/common/is";
 import { MobilePreview } from "./views/mobile-preview";
 import { useUpdateEffect } from "./hooks/useUpdateEffect";
 import { ResumePreview } from "./views/preview";
+import { JSONEditor } from "./views/json-editor";
 
 const isPreview = new URL(location.href).searchParams.get("preview") !== null;
+const isJSON = new URL(location.href).searchParams.get("json") !== null;
 
 export default () => {
   const [isRender, setIsRender] = useState(false);
@@ -29,6 +31,7 @@ export default () => {
 
   if (isMobile()) return <MobilePreview></MobilePreview>;
   if (isPreview) return <ResumePreview></ResumePreview>;
+  if (isJSON) return <JSONEditor></JSONEditor>;
 
   return (
     <div className="resume-editor">
