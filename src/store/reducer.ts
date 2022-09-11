@@ -7,6 +7,8 @@ import {
 } from "src/utils/node-tree-utils";
 import { Actions, actions } from "./actions";
 
+export const CLD_STORAGE_KEY = "cld";
+
 // Component Layout Data
 export type CLD = { user: string; date: Date; children: LocalComponentConfig[] };
 export type SelectedNode = { id: string; name: string }; // id: uuid, type: module.name
