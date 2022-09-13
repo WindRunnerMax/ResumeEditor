@@ -22,7 +22,7 @@ specifiers:
   cross-env: ^7.0.3
   css2json: ^1.1.1
   customize-cra: ^1.0.0
-  doc-editor-light: ^0.1.7
+  doc-editor-light: ^0.1.8
   eslint: 7.11.0
   eslint-config-prettier: ^8.3.0
   eslint-plugin-import: ^2.25.3
@@ -74,7 +74,7 @@ dependencies:
   '@types/uuid': registry.npmmirror.com/@types/uuid/8.3.4
   ahooks: registry.npmmirror.com/ahooks/3.3.13_react@17.0.2
   css2json: registry.npmmirror.com/css2json/1.1.1
-  doc-editor-light: registry.npmmirror.com/doc-editor-light/0.1.7_cb007ecfaf6f72ea7fc959fdf982f84c
+  doc-editor-light: registry.npmmirror.com/doc-editor-light/0.1.8_cb007ecfaf6f72ea7fc959fdf982f84c
   immer: registry.npmmirror.com/immer/9.0.12
   jsoneditor: registry.npmmirror.com/jsoneditor/9.9.0
   lodash: registry.npmmirror.com/lodash/4.17.21
@@ -12626,11 +12626,11 @@ packages:
     hasBin: true
     dev: false
 
-  registry.npmmirror.com/doc-editor-light/0.1.7_cb007ecfaf6f72ea7fc959fdf982f84c:
-    resolution: {integrity: sha512-7uUY7xzdRECbLVg1F9E4qlWWmMcNVfnVdoUNi7MQ7idbPu5p+kbrkuN5wG/DZZEjR2jhobEn2dTRo+45mijueg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/doc-editor-light/-/doc-editor-light-0.1.7.tgz}
-    id: registry.npmmirror.com/doc-editor-light/0.1.7
+  registry.npmmirror.com/doc-editor-light/0.1.8_cb007ecfaf6f72ea7fc959fdf982f84c:
+    resolution: {integrity: sha512-r3Etd9OU1IR7SjAYVjb/9/57QO+bTqUUfTyylcnK3YxyHzpCFtOM33HJ6/WTcuOqw8gYQsYGOr6DNtoFTzmbtw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/doc-editor-light/-/doc-editor-light-0.1.8.tgz}
+    id: registry.npmmirror.com/doc-editor-light/0.1.8
     name: doc-editor-light
-    version: 0.1.7
+    version: 0.1.8
     dependencies:
       '@arco-design/web-react': registry.npmmirror.com/@arco-design/web-react/2.32.2_754373e9ff7ac084ec3ce5a222b8dbcc
       '@babel/core': registry.npmmirror.com/@babel/core/7.18.5
