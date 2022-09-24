@@ -124,6 +124,7 @@ export const MainPanel: React.FC<PedestalMainProps> = props => {
                         dispatch={dispatch}
                         config={item}
                         cols={cols}
+                        display={!isRender && !dragging}
                       >
                         {item.config.observeResize ? (
                           <ResizeObserverHOC

@@ -14,6 +14,7 @@ export const ToolBar: React.FC<{
   dispatch: ContextDispatch;
   config: LocalComponentConfig;
   cols: number;
+  display: boolean;
 }> = props => {
   const { selectedId, dispatch, config, cols } = props;
 
@@ -62,7 +63,7 @@ export const ToolBar: React.FC<{
 
   return (
     <Trigger
-      popupVisible={selectedId === config.id}
+      popupVisible={props.display && selectedId === config.id}
       popup={() => Menu}
       position="top"
       trigger="contextMenu"
