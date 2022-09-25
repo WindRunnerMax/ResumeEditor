@@ -10,7 +10,7 @@ export const richText: LocalComponent = {
       x: 0,
       y: 0,
       w: 20,
-      h: 10,
+      h: 3,
       isDraggable: true,
       isResizable: true,
       minW: 4,

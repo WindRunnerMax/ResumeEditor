@@ -67,6 +67,7 @@ export const ToolBar: React.FC<{
       popup={() => Menu}
       position="top"
       trigger="contextMenu"
+      popupAlign={{ top: 5 }}
     >
       {props.children}
     </Trigger>
