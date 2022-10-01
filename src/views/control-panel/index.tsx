@@ -23,10 +23,7 @@ export const ControlPanel: React.FC<{ className: string }> = props => {
     if (state.selectedNode.id) {
       const index = findIndexInSections(state.cld.children, state.selectedNode.id);
       if (!isEmptyValue(index)) {
-        dispatch({
-          type: actions.ADD_SECTION,
-          payload: { config: cld, index },
-        });
+        dispatch({ type: actions.ADD_SECTION, payload: { config: cld, index } });
       }
     } else {
       dispatch({ type: actions.ADD_SECTION, payload: { config: cld } });
@@ -46,10 +43,7 @@ export const ControlPanel: React.FC<{ className: string }> = props => {
         if (!res) return Message.error("模版加载失败");
         res.user = "Czy";
         res.date = new Date();
-        dispatch({
-          type: actions.INIT_STATE,
-          payload: res,
-        });
+        dispatch({ type: actions.INIT_STATE, payload: res });
       },
     });
   });

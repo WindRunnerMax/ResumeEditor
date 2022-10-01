@@ -1,10 +1,10 @@
 import "./App.css";
+import "./styles/asse-style.scss";
 import Debug from "./components/debug";
 import { ControlPanel } from "./views/control-panel";
 import { EditorPanel } from "./views/editor-panel";
 import { MainPanel } from "./views/main-panel";
 import { AppProvider } from "./store/context";
-import "./styles/asse-style.scss";
 import { useState } from "react";
 import { isMobile } from "./utils/common/is";
 import { MobilePreview } from "./views/mobile-preview";
@@ -12,8 +12,9 @@ import { useUpdateEffect } from "./hooks/useUpdateEffect";
 import { ResumePreview } from "./views/preview";
 import { JSONEditor } from "./views/json-editor";
 
-const isPreview = new URL(location.href).searchParams.get("preview") !== null;
-const isJSON = new URL(location.href).searchParams.get("json") !== null;
+const urlParams = new URL(location.href).searchParams;
+const isPreview = urlParams.get("preview") !== null;
+const isJSON = urlParams.get("json") !== null;
 
 export default () => {
   const [isRender, setIsRender] = useState(false);
