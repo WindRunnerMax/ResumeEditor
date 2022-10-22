@@ -19,3 +19,5 @@ export const ResumePreview: FC = () => {
     </div>
   );
 };
+
+export default ResumePreview;

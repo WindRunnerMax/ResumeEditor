@@ -7,10 +7,13 @@ import { MainPanel } from "./views/main-panel";
 import { AppProvider } from "./store/context";
 import { useState } from "react";
 import { isMobile } from "./utils/common/is";
-import { MobilePreview } from "./views/mobile-preview";
 import { useUpdateEffect } from "./hooks/useUpdateEffect";
-import { ResumePreview } from "./views/preview";
-import { JSONEditor } from "./views/json-editor";
+import { LazyLoad } from "./components/lazy-load";
+import { lazy } from "react";
+
+const JSONEditor = lazy(() => import("./views/json-editor"));
+const ResumePreview = lazy(() => import("./views/preview"));
+const MobilePreview = lazy(() => import("./views/mobile-preview"));
 
 const urlParams = new URL(location.href).searchParams;
 const isPreview = urlParams.get("preview") !== null;
@@ -30,9 +33,9 @@ export default () => {
     setIsRender(true);
   };
 
-  if (isMobile()) return <MobilePreview></MobilePreview>;
-  if (isPreview) return <ResumePreview></ResumePreview>;
-  if (isJSON) return <JSONEditor></JSONEditor>;
+  if (isMobile()) return <LazyLoad component={<MobilePreview></MobilePreview>}></LazyLoad>;
+  if (isPreview) return <LazyLoad component={<ResumePreview></ResumePreview>}></LazyLoad>;
+  if (isJSON) return <LazyLoad component={<JSONEditor></JSONEditor>}></LazyLoad>;
 
   return (
     <div className="resume-editor">

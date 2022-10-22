@@ -54,3 +54,5 @@ export const JSONEditor: FC = () => {
     </div>
   );
 };
+
+export default JSONEditor;

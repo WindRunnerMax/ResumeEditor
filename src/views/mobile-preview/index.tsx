@@ -25,3 +25,5 @@ export const MobilePreview: FC = () => {
     </div>
   );
 };
+
+export default MobilePreview;
