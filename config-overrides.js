@@ -45,6 +45,10 @@ module.exports = {
       libraryDirectory: "react-icon",
       camel2DashComponentName: false,
     }),
+    fixBabelImports("lodash", {
+      libraryDirectory: "",
+      camel2DashComponentName: false,
+    }),
     addLessLoader({
       javascriptEnabled: true,
       importLoaders: true,
