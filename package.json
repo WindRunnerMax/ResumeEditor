@@ -7,7 +7,8 @@
     "build": "react-app-rewired build",
     "lint-es": "eslint --fix --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore .",
     "lint-style": "stylelint \"**/*.{css,scss,sass}\" --fix --ignore-path .gitignore",
-    "lint": "npm run lint-es && npm run lint-style"
+    "lint": "npm run lint-es && npm run lint-style",
+    "analyzer": "export BUNDLE_ANALYZER=true && npm run build"
   },
   "dependencies": {
     "@arco-design/web-react": "^2.32.2",
@@ -68,7 +69,8 @@
     "stylelint-config-sass-guidelines": "^9.0.1",
     "stylelint-config-standard": "^25.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "webpack": "^4.0.0"
+    "webpack": "^4.0.0",
+    "webpack-bundle-analyzer": "^4.6.1"
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": [

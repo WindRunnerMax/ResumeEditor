@@ -1,5 +1,7 @@
 const { override, fixBabelImports, disableEsLint, addLessLoader } = require("customize-cra");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+
 // const { paths: rewiredPaths } = require("react-app-rewired");
 // const { scriptVersion } = rewiredPaths;
 // const paths = require(`${scriptVersion}/config/paths`);
@@ -23,13 +25,12 @@ const configWebpackPlugins = () => config => {
   process.env.NODE_ENV === "production" &&
     config.plugins.push(
       new UglifyJsPlugin({
-        uglifyOptions: {
-          compress: {
-            drop_debugger: true,
-            drop_console: true,
-          },
-        },
+        uglifyOptions: { compress: { drop_debugger: true, drop_console: true } },
       })
+    );
+  process.env.BUNDLE_ANALYZER === "true" &&
+    config.plugins.push(
+      new BundleAnalyzerPlugin({ analyzerMode: "static", reportFilename: "report.html" })
     );
   return config;
 };
