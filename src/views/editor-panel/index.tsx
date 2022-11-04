@@ -43,13 +43,16 @@ export const EditorPanel: React.FC<{
             <>
               <div>
                 <Link target="_blank" href="https://github.com/WindrunnerMax/ResumeEditor">
-                  Github地址
+                  Github
                 </Link>
                 <Link
                   target="_blank"
                   href="https://github.com/WindrunnerMax/ResumeEditor#%E5%AF%BC%E5%87%BApdf"
                 >
                   使用必读
+                </Link>
+                <Link target="_blank" href="https://github.com/WindrunnerMax/ResumeEditor/issues/2">
+                  常见问题
                 </Link>
               </div>
               <div>
