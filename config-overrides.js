@@ -2,9 +2,6 @@ const { override, fixBabelImports, disableEsLint, addLessLoader } = require("cus
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
-// const { paths: rewiredPaths } = require("react-app-rewired");
-// const { scriptVersion } = rewiredPaths;
-// const paths = require(`${scriptVersion}/config/paths`);
 // https://github.com/arackaf/customize-cra
 
 const configWebpackPlugins = () => config => {
@@ -12,15 +9,12 @@ const configWebpackPlugins = () => config => {
   // 关闭`ESLINT`的插件 在`VSCode`校验
   // 关闭`CaseSensitivePathsPlugin`插件
   // 关闭`IgnorePlugin`插件
-  // 关闭`TS`校验插件 在`VSCode`校验
   config.plugins = config.plugins.filter(
     plugin =>
       plugin.constructor.name !== "ESLintWebpackPlugin" &&
       plugin.constructor.name !== "CaseSensitivePathsPlugin" &&
       plugin.constructor.name !== "IgnorePlugin"
-    // plugin.constructor.name !== "ForkTsCheckerWebpackPlugin"
   );
-  // paths.appTsConfig = void 0; // 关闭`TS`校验插件 在`VSCode`校验
   // 添加插件
   process.env.NODE_ENV === "production" &&
     config.plugins.push(
