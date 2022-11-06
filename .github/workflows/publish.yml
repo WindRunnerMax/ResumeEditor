@@ -1,4 +1,4 @@
-name: publish gh-page
+name: publish gh-pages
 
 on:
   push:
