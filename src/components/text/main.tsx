@@ -83,7 +83,7 @@ export const RichText: FC<{
     <div className={classes("pedestal-text", props.className)} style={props.instance.style}>
       <Slate editor={withVoidEditor} value={initText} onChange={updateText}>
         <div onClick={e => e.stopPropagation()}>
-          <MenuToolBar isRender={props.isRender} commands={commands}></MenuToolBar>
+          <MenuToolBar isRender={props.isRender} commands={commands} editor={editor}></MenuToolBar>
         </div>
         <Editable
           renderElement={renderElement}
