@@ -2,16 +2,16 @@ import { LocalComponentConfig } from "src/types/components-types";
 import { CLD } from "./reducer";
 
 export const actions = {
-  INIT_STATE: "INIT_STATE" as const,
-  ADD_SECTION: "ADD_SECTION" as const,
-  ADD_CHILD_SECTION: "ADD_CHILD_SECTION" as const,
-  SWAP_SECTION: "SWAP_SECTION" as const,
-  DELETE_SECTION: "DELETE_SECTION" as const,
-  DELETE_ONE_BY_UUID: "DELETE_ONE_BY_UUID" as const,
-  UPDATE_ONE: "UPDATE_ONE" as const,
-  SELECT_NODE: "SELECT_NODE" as const,
-  UPDATE_ALL: "UPDATE_ALL" as const,
-};
+  INIT_STATE: "INIT_STATE",
+  ADD_SECTION: "ADD_SECTION",
+  ADD_CHILD_SECTION: "ADD_CHILD_SECTION",
+  SWAP_SECTION: "SWAP_SECTION",
+  DELETE_SECTION: "DELETE_SECTION",
+  DELETE_ONE_BY_UUID: "DELETE_ONE_BY_UUID",
+  UPDATE_ONE: "UPDATE_ONE",
+  SELECT_NODE: "SELECT_NODE",
+  UPDATE_ALL: "UPDATE_ALL",
+} as const;
 
 interface INIT_STATE {
   type: typeof actions.INIT_STATE;
