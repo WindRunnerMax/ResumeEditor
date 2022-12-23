@@ -25,11 +25,13 @@ import {
   SlatePlugins,
   FontBasePlugin,
   LineHeightPlugin,
+  withSchema,
 } from "doc-editor-light";
 import { useMemoizedFn } from "ahooks";
 import { debounce } from "lodash";
 import { actions } from "src/store/actions";
 import { ContextDispatch } from "src/store/context";
+import { schema } from "./schema";
 
 export const RichText: FC<{
   className?: string;
@@ -37,7 +39,7 @@ export const RichText: FC<{
   dispatch: ContextDispatch;
   isRender: boolean;
 }> = props => {
-  const editor = useMemo(() => withHistory(withReact(createEditor())), []);
+  const editor = useMemo(() => withSchema(schema, withHistory(withReact(createEditor()))), []);
 
   const initText = (props.instance.props as Record<string, Descendant[]>).text || [
     { children: [{ text: "" }] },
@@ -52,38 +54,36 @@ export const RichText: FC<{
     }, 500)
   );
 
-  const { renderElement, renderLeaf, onKeyDown, withVoidElements, commands, onCopy } =
-    useMemo(() => {
-      const register = new SlatePlugins(
-        ParagraphPlugin(),
-        HeadingPlugin(editor),
-        BoldPlugin(),
-        QuoteBlockPlugin(editor),
-        HyperLinkPlugin(editor, props.isRender),
-        UnderLinePlugin(),
-        StrikeThroughPlugin(),
-        ItalicPlugin(),
-        InlineCodePlugin(),
-        OrderedListPlugin(editor),
-        UnorderedListPlugin(editor),
-        DividingLinePlugin(),
-        AlignPlugin(),
-        FontBasePlugin(),
-        LineHeightPlugin()
-      );
+  const { renderElement, renderLeaf, onKeyDown, commands, onCopy } = useMemo(() => {
+    const register = new SlatePlugins(
+      ParagraphPlugin(),
+      HeadingPlugin(editor),
+      BoldPlugin(),
+      QuoteBlockPlugin(editor),
+      HyperLinkPlugin(editor, props.isRender),
+      UnderLinePlugin(),
+      StrikeThroughPlugin(),
+      ItalicPlugin(),
+      InlineCodePlugin(),
+      OrderedListPlugin(editor),
+      UnorderedListPlugin(editor),
+      DividingLinePlugin(),
+      AlignPlugin(),
+      FontBasePlugin(),
+      LineHeightPlugin()
+    );
 
-      const commands = register.getCommands();
-      register.add(ShortCutPlugin(editor, commands));
+    const commands = register.getCommands();
+    register.add(ShortCutPlugin(editor, commands));
 
-      return register.apply();
-    }, [editor, props.isRender]);
+    return register.apply();
+  }, [editor, props.isRender]);
 
-  const withVoidEditor = useMemo(() => withVoidElements(editor), [editor, withVoidElements]);
   return (
     <div className={classes("pedestal-text", props.className)} style={props.instance.style}>
-      <Slate editor={withVoidEditor} value={initText} onChange={updateText}>
+      <Slate editor={editor} value={initText} onChange={updateText}>
         <div onClick={e => e.stopPropagation()}>
-          <MenuToolBar isRender={props.isRender} commands={commands} editor={editor}></MenuToolBar>
+          <MenuToolBar readonly={props.isRender} commands={commands} editor={editor}></MenuToolBar>
         </div>
         <Editable
           renderElement={renderElement}
