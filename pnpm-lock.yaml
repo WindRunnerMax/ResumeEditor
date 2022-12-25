@@ -22,7 +22,7 @@ specifiers:
   cross-env: ^7.0.3
   css2json: ^1.1.1
   customize-cra: ^1.0.0
-  doc-editor-light: ^0.3.4
+  doc-editor-light: ^0.3.5
   eslint: 7.11.0
   eslint-config-prettier: ^8.3.0
   eslint-plugin-import: ^2.25.3
@@ -75,7 +75,7 @@ dependencies:
   '@types/uuid': registry.npmmirror.com/@types/uuid/8.3.4
   ahooks: registry.npmmirror.com/ahooks/3.3.13_react@17.0.2
   css2json: registry.npmmirror.com/css2json/1.1.1
-  doc-editor-light: registry.npmmirror.com/doc-editor-light/0.3.4_cb007ecfaf6f72ea7fc959fdf982f84c
+  doc-editor-light: registry.npmmirror.com/doc-editor-light/0.3.5_cb007ecfaf6f72ea7fc959fdf982f84c
   immer: registry.npmmirror.com/immer/9.0.12
   jsoneditor: registry.npmmirror.com/jsoneditor/9.9.0
   lodash: registry.npmmirror.com/lodash/4.17.21
@@ -2483,8 +2483,8 @@ packages:
     name: dom-serializer
     version: 0.2.2
     dependencies:
-      domelementtype: registry.nlark.com/domelementtype/2.2.0
-      entities: registry.nlark.com/entities/2.2.0
+      domelementtype: registry.npmmirror.com/domelementtype/2.3.0
+      entities: registry.npmmirror.com/entities/2.2.0
     dev: false
 
   registry.nlark.com/dom-serializer/1.3.2:
@@ -2492,15 +2492,9 @@ packages:
     name: dom-serializer
     version: 1.3.2
     dependencies:
-      domelementtype: registry.nlark.com/domelementtype/2.2.0
-      domhandler: registry.nlark.com/domhandler/4.2.2
-      entities: registry.nlark.com/entities/2.2.0
-    dev: false
-
-  registry.nlark.com/domelementtype/1.3.1:
-    resolution: {integrity: sha1-0EjESzew0Qp/Kj1f7j9DM9eQSB8=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/domelementtype/download/domelementtype-1.3.1.tgz}
-    name: domelementtype
-    version: 1.3.1
+      domelementtype: registry.npmmirror.com/domelementtype/2.3.0
+      domhandler: registry.npmmirror.com/domhandler/4.2.2
+      entities: registry.npmmirror.com/entities/2.2.0
     dev: false
 
   registry.nlark.com/domelementtype/2.2.0:
@@ -2515,7 +2509,7 @@ packages:
     version: 4.2.2
     engines: {node: '>= 4'}
     dependencies:
-      domelementtype: registry.nlark.com/domelementtype/2.2.0
+      domelementtype: registry.npmmirror.com/domelementtype/2.3.0
     dev: false
 
   registry.nlark.com/domutils/1.7.0:
@@ -2524,7 +2518,7 @@ packages:
     version: 1.7.0
     dependencies:
       dom-serializer: registry.nlark.com/dom-serializer/0.2.2
-      domelementtype: registry.nlark.com/domelementtype/1.3.1
+      domelementtype: registry.npmmirror.com/domelementtype/1.3.1
     dev: false
 
   registry.nlark.com/domutils/2.8.0:
@@ -2533,8 +2527,8 @@ packages:
     version: 2.8.0
     dependencies:
       dom-serializer: registry.nlark.com/dom-serializer/1.3.2
-      domelementtype: registry.nlark.com/domelementtype/2.2.0
-      domhandler: registry.nlark.com/domhandler/4.2.2
+      domelementtype: registry.npmmirror.com/domelementtype/2.3.0
+      domhandler: registry.npmmirror.com/domhandler/4.2.2
     dev: false
 
   registry.nlark.com/dot-case/3.0.4:
@@ -12651,11 +12645,11 @@ packages:
     hasBin: true
     dev: false
 
-  registry.npmmirror.com/doc-editor-light/0.3.4_cb007ecfaf6f72ea7fc959fdf982f84c:
-    resolution: {integrity: sha512-mFmpMsOhXhXLNbWPdBTQeH64SepSwIetcfFOwZIzZvg2uLIyzIC9qJWksF/jAotAMYsHYD02rqz7uwc7mLxK6A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/doc-editor-light/-/doc-editor-light-0.3.4.tgz}
-    id: registry.npmmirror.com/doc-editor-light/0.3.4
+  registry.npmmirror.com/doc-editor-light/0.3.5_cb007ecfaf6f72ea7fc959fdf982f84c:
+    resolution: {integrity: sha512-fvYTVht3Dh3g6/9loFrjRKdl1lYjRB7zaYCPJN7/NWbnO91zp0RItB+B9q3/cJQ1nwfdhBv3gafZeLPOuirXGA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/doc-editor-light/-/doc-editor-light-0.3.5.tgz}
+    id: registry.npmmirror.com/doc-editor-light/0.3.5
     name: doc-editor-light
-    version: 0.3.4
+    version: 0.3.5
     dependencies:
       '@arco-design/web-react': registry.npmmirror.com/@arco-design/web-react/2.32.2_754373e9ff7ac084ec3ce5a222b8dbcc
       '@babel/core': registry.npmmirror.com/@babel/core/7.18.5
@@ -12732,6 +12726,12 @@ packages:
     version: 1.2.0
     engines: {node: '>=0.4', npm: '>=1.2'}
 
+  registry.npmmirror.com/domelementtype/1.3.1:
+    resolution: {integrity: sha512-BSKB+TSpMpFI/HOxCNr1O8aMOTZ8hT3pM3GQ0w/mWRmkhEDSFJkkyzz4XQsBV44BChwGkrDfMyjVD0eA2aFV3w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/domelementtype/-/domelementtype-1.3.1.tgz}
+    name: domelementtype
+    version: 1.3.1
+    dev: false
+
   registry.npmmirror.com/domelementtype/2.3.0:
     resolution: {integrity: sha512-OLETBj6w0OsagBwdXnPdN0cnMfF9opN69co+7ZrbfPGrdpPVNBUj02spi6B1N7wChLQiPn4CSH/zJvXw56gmHw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/domelementtype/-/domelementtype-2.3.0.tgz}
     name: domelementtype
@@ -12745,6 +12745,15 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       webidl-conversions: registry.nlark.com/webidl-conversions/5.0.0
+    dev: false
+
+  registry.npmmirror.com/domhandler/4.2.2:
+    resolution: {integrity: sha512-PzE9aBMsdZO8TK4BnuJwH0QT41wgMbRzuZrHUcpYncEjmQazq8QEaBWgLG7ZyC/DAZKEgglpIA6j4Qn/HmxS3w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/domhandler/-/domhandler-4.2.2.tgz}
+    name: domhandler
+    version: 4.2.2
+    engines: {node: '>= 4'}
+    dependencies:
+      domelementtype: registry.npmmirror.com/domelementtype/2.3.0
     dev: false
 
   registry.npmmirror.com/domhandler/5.0.3:
@@ -12903,6 +12912,12 @@ packages:
       graceful-fs: registry.npmmirror.com/graceful-fs/4.2.8
       memory-fs: registry.npmmirror.com/memory-fs/0.5.0
       tapable: registry.npmmirror.com/tapable/1.1.3
+
+  registry.npmmirror.com/entities/2.2.0:
+    resolution: {integrity: sha512-p92if5Nz619I0w+akJrLZH0MX0Pb5DX39XOwQTtXSdQQOaYH03S1uIQp4mhOZtAXrxq4ViO67YTiLBo2638o9A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/entities/-/entities-2.2.0.tgz}
+    name: entities
+    version: 2.2.0
+    dev: false
 
   registry.npmmirror.com/entities/4.4.0:
     resolution: {integrity: sha512-oYp7156SP8LkeGD0GF85ad1X9Ai79WtRsZ2gxJqtBuzH+98YUV6jkHEKlZkMbcrjJjIVJNIDP/3WL9wQkoPbWA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/entities/-/entities-4.4.0.tgz}

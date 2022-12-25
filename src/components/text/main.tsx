@@ -1,5 +1,5 @@
 import "./index.scss";
-import "doc-editor-light/dist/plugins/styles";
+import "doc-editor-light/dist/styles/index";
 import { FC, useMemo } from "react";
 import { LocalComponentConfig } from "src/types/components-types";
 import { classes } from "src/utils/common/utils";
