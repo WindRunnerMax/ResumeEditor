@@ -33,7 +33,10 @@ export const MainPanel: React.FC<PedestalMainProps> = props => {
     const idNodeMap = arrayMapper(instance.children, "id");
     const nodeChildren: LocalComponentConfig[] = layouts.map(item => {
       const curNode = idNodeMap[item.i];
-      return { ...curNode, config: { ...curNode.config, layout: { ...item } } };
+      return {
+        ...curNode,
+        config: { ...curNode.config, layout: { ...item } },
+      } as LocalComponentConfig;
     });
     dispatch({
       type: actions.UPDATE_ALL,

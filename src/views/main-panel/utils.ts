@@ -31,10 +31,10 @@ export const generateLayout = (
   isRender?: boolean
 ): Layout[] => {
   return instances.map(item => {
-    const defaultLayout: Layout = { i: item.id, ...initLayout };
+    const defaultLayout: Layout = { ...initLayout, i: item.id };
     if (item.config.layout) {
-      const configLayout: Layout = item.config.layout as Layout;
-      const layout = { ...defaultLayout, ...configLayout };
+      const configLayout: Layout = item.config.layout;
+      const layout = { ...defaultLayout, ...configLayout, i: item.id };
       layout.isDraggable = !isRender;
       layout.isResizable = !isRender;
 

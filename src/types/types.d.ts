@@ -16,11 +16,9 @@ type DeepMergeUtil<K, T, R> = R[K] extends Record<string, unknown>
   : R[K];
 
 declare module "resume-editor" {
-  interface LocalComponentMap {
-    base: import("./components").LocalComponentConfig;
-  }
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  interface LocalComponentMap {}
 
-  interface RemoteComponentMap {
-    base: import("./components").RemoteComponentConfig;
-  }
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  interface RemoteComponentMap {}
 }

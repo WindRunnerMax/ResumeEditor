@@ -4,21 +4,20 @@ import { v4 as uuid } from "uuid";
 
 /**
  * 组件定义转`CLD`定义
- * @param config ComponentConfig | SubclassComponent | R(subclass类型重载)
+ * @param config ComponentConfig
  * @param extra  T|void
  * @returns LocalComponentConfig
  */
-export const getLocalComponentConfigClone = <
-  T extends Record<string, unknown>,
-  R extends { type: "subclass"; name: string; module: Record<string, unknown> }
->(
-  config: LocalComponent | R,
+export const getLocalComponentConfigClone = <T extends Record<string, unknown>>(
+  config: LocalComponent,
   extra?: T
 ): LocalComponentConfig => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { module, ...rest } = config;
   return deepClone({
     id: uuid(),
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore // 防止未定义 类型严格定义会认为`config`必存在
     config: {},
     style: {},
     props: {},
