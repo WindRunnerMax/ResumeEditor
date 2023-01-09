@@ -1,5 +1,5 @@
 import "./index.scss";
-import { LocalComponentConfig } from "src/types/components-types";
+import { LocalComponentConfig } from "src/types/components";
 import { IconAlignCenter, IconCopy, IconDelete, IconFullscreen } from "@arco-design/web-react/icon";
 import { ContextDispatch } from "src/store/context";
 import { Button, Trigger } from "@arco-design/web-react";

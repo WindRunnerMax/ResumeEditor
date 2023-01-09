@@ -1,4 +1,4 @@
-import { LocalComponent } from "src/types/components-types";
+import { LocalComponent } from "src/types/components";
 import { BlankControl } from "./control";
 import { BlankEditor } from "./editor";
 import { BlankMain } from "./main";

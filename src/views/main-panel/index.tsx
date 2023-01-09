@@ -6,7 +6,7 @@ import { getComponentInstanceSync } from "src/utils/components-utils";
 import { generateLayout } from "./utils";
 import GridLayout, { Layout, WidthProvider } from "react-grid-layout";
 import { arrayMapper, cs } from "src/utils/common/utils";
-import { LocalComponentConfig } from "src/types/components-types";
+import { LocalComponentConfig } from "src/types/components";
 import { actions } from "src/store/actions";
 import ReferenceLine from "src/views/main-panel/components/reference-line";
 import { ToolBar } from "src/views/main-panel/components/tool-bar";

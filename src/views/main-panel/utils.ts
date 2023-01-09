@@ -1,5 +1,5 @@
 import { Layout } from "react-grid-layout";
-import { LocalComponentConfig } from "src/types/components-types";
+import { LocalComponentConfig } from "src/types/components";
 
 type InitLayout = {
   x: number;

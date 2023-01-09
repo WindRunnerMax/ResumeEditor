@@ -1,4 +1,4 @@
-import { LocalComponent } from "src/types/components-types";
+import { LocalComponent } from "src/types/components";
 import { RichTextControl } from "./control";
 import { RichTextEditor } from "./editor";
 import { RichText } from "./main";

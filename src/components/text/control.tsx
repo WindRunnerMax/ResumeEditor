@@ -1,5 +1,5 @@
 import "./index.scss";
-import { ControlPanelFC } from "src/types/components-types";
+import { ControlPanelFC } from "src/types/components";
 import { IconFile } from "@arco-design/web-react/icon";
 import { getLocalComponentConfigClone } from "src/utils/components-utils";
 import { richText } from ".";

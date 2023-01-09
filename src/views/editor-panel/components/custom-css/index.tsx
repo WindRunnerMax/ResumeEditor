@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Form, FormInstance, Input } from "@arco-design/web-react";
-import { EditorPanelFC, LocalComponentConfig } from "src/types/components-types";
+import { EditorPanelFC, LocalComponentConfig } from "src/types/components";
 import { findOneInNodeTree } from "src/utils/node-tree-utils";
 import { actions } from "src/store/actions";
 import { useMemoizedFn } from "ahooks";

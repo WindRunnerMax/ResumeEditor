@@ -1,6 +1,6 @@
 import React, { FC, useMemo } from "react";
 import { ContextDispatch } from "src/store/context";
-import { LocalComponentConfig, MainPanelFC } from "src/types/components-types";
+import { LocalComponentConfig, MainPanelFC } from "src/types/components";
 import { withSize, SizeMeProps } from "react-sizeme";
 import { Layout } from "react-grid-layout";
 import { actions } from "src/store/actions";

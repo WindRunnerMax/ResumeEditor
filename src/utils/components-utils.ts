@@ -1,4 +1,4 @@
-import { LocalComponent, LocalComponentConfig, Panel } from "src/types/components-types";
+import { LocalComponent, LocalComponentConfig, Panel } from "src/types/components";
 import deepClone from "lodash/cloneDeep";
 import { v4 as uuid } from "uuid";
 

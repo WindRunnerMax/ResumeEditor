@@ -1,4 +1,4 @@
-import { LocalComponent } from "src/types/components-types";
+import { LocalComponent } from "src/types/components";
 import { ImageControl } from "./control";
 import ImageEditor from "./editor";
 import ImageMain from "./main";

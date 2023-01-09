@@ -1,6 +1,6 @@
 import "./index.scss";
 import { FC } from "react";
-import { LocalComponentConfig } from "src/types/components-types";
+import { LocalComponentConfig } from "src/types/components";
 import { classes } from "src/utils/common/utils";
 
 export const BlankMain: FC<{

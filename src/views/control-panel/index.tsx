@@ -8,7 +8,7 @@ import { findIndexInSections } from "src/utils/node-tree-utils";
 import { isEmptyValue } from "src/utils/common/is";
 import { useMemoizedFn } from "ahooks";
 import React from "react";
-import { LocalComponentConfig } from "src/types/components-types";
+import { LocalComponentConfig } from "src/types/components";
 import { templateConfig, templateLoader } from "src/utils/template-loader";
 import { Message, Modal } from "@arco-design/web-react";
 import { CLD } from "src/store/reducer";

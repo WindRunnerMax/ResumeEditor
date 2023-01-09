@@ -14,3 +14,13 @@ type DeepMergeUtil<K, T, R> = R[K] extends Record<string, unknown>
     ? DeepMerge<T[K], R[K]>
     : R[K]
   : R[K];
+
+declare module "resume-editor" {
+  interface LocalComponentMap {
+    base: import("./components").LocalComponentConfig;
+  }
+
+  interface RemoteComponentMap {
+    base: import("./components").RemoteComponentConfig;
+  }
+}

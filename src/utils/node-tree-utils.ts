@@ -1,5 +1,5 @@
 import { isObject } from "./common/is";
-import { LocalComponentConfig } from "src/types/components-types";
+import { LocalComponentConfig } from "src/types/components";
 
 /**
  * @param tree LocalComponentConfig.children

@@ -1,7 +1,7 @@
 import "./index.scss";
 import "doc-editor-light/dist/styles/index";
 import { FC, useMemo } from "react";
-import { LocalComponentConfig } from "src/types/components-types";
+import { LocalComponentConfig } from "src/types/components";
 import { classes } from "src/utils/common/utils";
 import { withHistory } from "slate-history";
 import { Editable, Slate, withReact } from "slate-react";

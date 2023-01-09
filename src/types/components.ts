@@ -30,7 +30,13 @@ interface ComponentsBase {
   config?: Record<string, unknown>; // 配置信息
 }
 export interface LocalComponent extends ComponentsBase {
+  type: "local";
   module: Panel;
+}
+
+export interface RemoteComponent extends ComponentsBase {
+  type: "remote";
+  url: string;
 }
 
 type OmitProps = "module";

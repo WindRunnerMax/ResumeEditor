@@ -1,4 +1,4 @@
-import { LocalComponentConfig } from "src/types/components-types";
+import { LocalComponentConfig } from "src/types/components";
 import { CLD } from "./reducer";
 
 export const actions = {

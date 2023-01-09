@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import { Form, FormInstance, ImageProps, Input, Upload } from "@arco-design/web-react";
 import { IconArrowUp } from "@arco-design/web-react/icon";
 import { UploadProps } from "@arco-design/web-react/es/Upload";
-import { EditorPanelFC, LocalComponentConfig } from "src/types/components-types";
+import { EditorPanelFC, LocalComponentConfig } from "src/types/components";
 import { findOneInNodeTree } from "src/utils/node-tree-utils";
 import { actions } from "src/store/actions";
 import { useMemoizedFn } from "ahooks";
