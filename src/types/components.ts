@@ -1,6 +1,5 @@
 import React from "react";
 import { ContextDispatch, ContextState } from "src/store/context";
-import type { LocalComponentMap, RemoteComponentMap } from "resume-editor";
 
 interface ComponentsBase {
   name: never; // 必须重新匹配

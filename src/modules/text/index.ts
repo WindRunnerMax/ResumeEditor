@@ -5,7 +5,7 @@ import { RichTextEditor } from "./editor";
 import { RichText } from "./main";
 
 const RICH_TEXT_KEY = "rich-text" as const;
-declare module "resume-editor" {
+declare module "../../types/components" {
   interface LocalComponentMap {
     [RICH_TEXT_KEY]: DeepMerge<
       BaseLocalComponent,

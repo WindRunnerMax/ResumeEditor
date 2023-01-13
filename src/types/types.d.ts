@@ -9,16 +9,13 @@ declare type DeepMerge<T, R> = Merge<
     [K in keyof R]: K extends keyof T ? DeepMergeUtil<K, T, R> : R[K];
   }
 >;
-type DeepMergeUtil<K, T, R> = R[K] extends Record<string, unknown>
+declare type DeepMergeUtil<K, T, R> = R[K] extends Record<string, unknown>
   ? T[K] extends Record<string, unknown>
     ? DeepMerge<T[K], R[K]>
     : R[K]
   : R[K];
 
-declare module "resume-editor" {
-  // eslint-disable-next-line @typescript-eslint/no-empty-interface
-  interface LocalComponentMap {}
-
-  // eslint-disable-next-line @typescript-eslint/no-empty-interface
-  interface RemoteComponentMap {}
-}
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+declare interface LocalComponentMap {}
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+declare interface RemoteComponentMap {}

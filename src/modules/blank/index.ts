@@ -5,7 +5,7 @@ import { BlankEditor } from "./editor";
 import { BlankMain } from "./main";
 
 const BLANK_KEY = "blank" as const;
-declare module "resume-editor" {
+declare module "../../types/components" {
   interface LocalComponentMap {
     [BLANK_KEY]: DeepMerge<
       BaseLocalComponent,

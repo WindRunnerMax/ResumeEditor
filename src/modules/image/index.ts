@@ -5,7 +5,7 @@ import ImageEditor from "./editor";
 import ImageMain from "./main";
 
 const IMAGE_KEY = "image" as const;
-declare module "resume-editor" {
+declare module "../../types/components" {
   interface LocalComponentMap {
     [IMAGE_KEY]: DeepMerge<
       BaseLocalComponent,
