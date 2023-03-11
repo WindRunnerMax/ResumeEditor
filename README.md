@@ -1,5 +1,5 @@
 # ResumeEditor
- [Github](https://github.com/WindrunnerMax/ResumeEditor) ｜ [Resume DEMO](https://windrunnermax.github.io/ResumeEditor/) ｜ [BLOG](https://github.com/WindrunnerMax/EveryDay/blob/master/Plugin/%E5%9F%BA%E4%BA%8ENoCode%E6%9E%84%E5%BB%BA%E7%AE%80%E5%8E%86%E7%BC%96%E8%BE%91%E5%99%A8.md) ｜ [TODO](./TODO.MD)
+ [Github](https://github.com/WindrunnerMax/ResumeEditor) ｜ [Resume DEMO](https://windrunnermax.github.io/ResumeEditor/) ｜ [BLOG](https://github.com/WindrunnerMax/EveryDay/blob/master/Plugin/%E5%9F%BA%E4%BA%8ENoCode%E6%9E%84%E5%BB%BA%E7%AE%80%E5%8E%86%E7%BC%96%E8%BE%91%E5%99%A8.md) ｜ [TODO](./TODO.MD) ｜ [FAQ](https://github.com/WindrunnerMax/ResumeEditor/issues/2)
  
 `ResumeEditor`简历编辑器，因为各种模版用起来细节上并不是很满意，所以尝试做个简单的拖拽简历编辑器。
 
