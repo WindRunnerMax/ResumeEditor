@@ -22,6 +22,7 @@ jobs:
           
       - name: install dependencies
         run: |
+          node -v
           npm install -g pnpm@6.24.3
           pnpm install
       
