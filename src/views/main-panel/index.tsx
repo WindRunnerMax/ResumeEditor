@@ -5,13 +5,14 @@ import { AppContext } from "src/store/context";
 import { getComponentInstanceSync } from "src/utils/components-utils";
 import { generateLayout } from "./utils";
 import GridLayout, { Layout, WidthProvider } from "react-grid-layout";
-import { arrayMapper, cs } from "src/utils/common/utils";
+import { arrayMapper } from "src/utils/common/mapper";
 import { LocalComponentConfig } from "src/types/components";
 import { actions } from "src/store/actions";
 import ReferenceLine from "src/views/main-panel/components/reference-line";
 import { ToolBar } from "src/views/main-panel/components/tool-bar";
 import { ResizeObserverHOC } from "./components/reszie-observe";
 import { Empty } from "./components/empty";
+import { cs } from "src/utils/common/style";
 const ResponsiveGridLayout = WidthProvider(GridLayout);
 
 type PedestalMainProps = {

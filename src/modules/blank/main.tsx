@@ -1,7 +1,7 @@
 import "./index.scss";
 import { FC } from "react";
 import { LocalComponentConfig } from "src/types/components";
-import { classes } from "src/utils/common/utils";
+import { classes } from "src/utils/common/style";
 
 export const BlankMain: FC<{
   className?: string;

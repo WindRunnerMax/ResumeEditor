@@ -1,7 +1,7 @@
 import "./index.scss";
 import React, { FC, useEffect, useRef, useState } from "react";
 import { useMemoizedFn } from "ahooks";
-import { classes } from "src/utils/common/utils";
+import { classes } from "src/utils/common/style";
 
 const ReferenceLine: FC<{
   className?: string;

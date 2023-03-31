@@ -2,7 +2,7 @@ import "./index.scss";
 import { FC } from "react";
 import { LocalComponentConfig } from "src/types/components";
 import { Image as ArcoImage } from "@arco-design/web-react";
-import { classes } from "src/utils/common/utils";
+import { classes } from "src/utils/common/style";
 
 const Image: FC<{
   className?: string;
