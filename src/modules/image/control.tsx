@@ -1,7 +1,7 @@
 import "./index.scss";
 import { ControlPanelFC } from "src/types/components";
 import { IconImage } from "@arco-design/web-react/icon";
-import { getLocalComponentConfigClone } from "src/utils/components-utils";
+import { getLocalComponentConfigClone } from "src/utils/loader/components-utils";
 import { image } from ".";
 
 export const ImageControl: ControlPanelFC = {

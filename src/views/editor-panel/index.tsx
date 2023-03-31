@@ -2,7 +2,7 @@ import "./index.scss";
 import { IconEdit } from "@arco-design/web-react/icon";
 import { useContext, useMemo } from "react";
 import { AppContext } from "src/store/context";
-import { getComponentInstanceSync } from "src/utils/components-utils";
+import { getComponentInstanceSync } from "src/utils/loader/components-utils";
 import { CustomCSS } from "./components/custom-css";
 import { Link } from "@arco-design/web-react";
 

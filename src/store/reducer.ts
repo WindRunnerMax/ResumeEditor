@@ -4,7 +4,7 @@ import {
   deleteOneInNodeTree,
   findOneInNodeTree,
   updateOneInNodeTree,
-} from "src/utils/node-tree-utils";
+} from "src/utils/iterator/node-tree-utils";
 import { Actions, actions } from "./actions";
 
 export const CLD_STORAGE_KEY = "cld";

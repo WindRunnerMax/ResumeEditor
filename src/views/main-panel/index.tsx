@@ -2,7 +2,7 @@ import "./index.scss";
 import { IconDragDot } from "@arco-design/web-react/icon";
 import { useContext, useState } from "react";
 import { AppContext } from "src/store/context";
-import { getComponentInstanceSync } from "src/utils/components-utils";
+import { getComponentInstanceSync } from "src/utils/loader/components-utils";
 import { generateLayout } from "./utils";
 import GridLayout, { Layout, WidthProvider } from "react-grid-layout";
 import { arrayMapper } from "src/utils/common/mapper";

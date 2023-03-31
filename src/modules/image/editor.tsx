@@ -4,7 +4,7 @@ import { Form, FormInstance, ImageProps, Input, Upload } from "@arco-design/web-
 import { IconArrowUp } from "@arco-design/web-react/icon";
 import { UploadProps } from "@arco-design/web-react/es/Upload";
 import { EditorPanelFC, LocalComponentConfig } from "src/types/components";
-import { findOneInNodeTree } from "src/utils/node-tree-utils";
+import { findOneInNodeTree } from "src/utils/iterator/node-tree-utils";
 import { actions } from "src/store/actions";
 import { useMemoizedFn } from "ahooks";
 import { debounce } from "lodash";
