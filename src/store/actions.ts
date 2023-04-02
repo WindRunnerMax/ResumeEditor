@@ -3,6 +3,7 @@ import { CLD } from "./reducer";
 
 export const actions = {
   INIT_STATE: "INIT_STATE",
+  REPLACE_STATE: "REPLACE_STATE",
   ADD_SECTION: "ADD_SECTION",
   ADD_CHILD_SECTION: "ADD_CHILD_SECTION",
   SWAP_SECTION: "SWAP_SECTION",
@@ -15,6 +16,10 @@ export const actions = {
 
 interface INIT_STATE {
   type: typeof actions.INIT_STATE;
+  payload: CLD;
+}
+interface REPLACE_STATE {
+  type: typeof actions.REPLACE_STATE;
   payload: CLD;
 }
 interface ADD_SECTION {
@@ -52,6 +57,7 @@ interface SELECT_NODE {
 
 export type Actions =
   | INIT_STATE
+  | REPLACE_STATE
   | ADD_SECTION
   | ADD_CHILD_SECTION
   | SWAP_SECTION
