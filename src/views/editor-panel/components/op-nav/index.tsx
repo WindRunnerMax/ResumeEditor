@@ -1,4 +1,5 @@
 import { Link } from "@arco-design/web-react";
+import "./index.scss";
 import React from "react";
 import { FC } from "react";
 
@@ -7,7 +8,8 @@ export const OpNav: FC<{
 }> = props => {
   return (
     <React.Fragment>
-      <div>
+      <div className="op-nav-label">链接</div>
+      <div className="op-nav-body">
         <Link target="_blank" href="https://github.com/WindrunnerMax/ResumeEditor">
           Github
         </Link>
@@ -21,7 +23,8 @@ export const OpNav: FC<{
           常见问题
         </Link>
       </div>
-      <div>
+      <div className="op-nav-label">操作</div>
+      <div className="op-nav-body">
         <Link href="?preview" target="_blank">
           实时预览
         </Link>

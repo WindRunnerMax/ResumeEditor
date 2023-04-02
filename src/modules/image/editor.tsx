@@ -49,7 +49,6 @@ const ImageEditor: EditorPanelFC = props => {
 
   return (
     <div>
-      <div className="a-capitalize pedestal-editor-title">{props.name}组件</div>
       <Form ref={formRef} layout="vertical" size="mini" onChange={changeProps}>
         <Form.Item label="src" field="src">
           <Input
