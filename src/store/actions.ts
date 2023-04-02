@@ -10,6 +10,7 @@ export const actions = {
   DELETE_SECTION: "DELETE_SECTION",
   DELETE_ONE_BY_UUID: "DELETE_ONE_BY_UUID",
   UPDATE_ONE: "UPDATE_ONE",
+  UPDATE_ONE_NO_UNDO: "UPDATE_ONE_NO_UNDO",
   SELECT_NODE: "SELECT_NODE",
   UPDATE_ALL: "UPDATE_ALL",
 } as const;
@@ -46,6 +47,10 @@ interface UPDATE_ONE {
   type: typeof actions.UPDATE_ONE;
   payload: { id: string; key: string; data: unknown; merge?: boolean };
 }
+interface UPDATE_ONE_NO_UNDO {
+  type: typeof actions.UPDATE_ONE_NO_UNDO;
+  payload: { id: string; key: string; data: unknown; merge?: boolean };
+}
 interface UPDATE_ALL {
   type: typeof actions.UPDATE_ALL;
   payload: { data: LocalComponentConfig[] };
@@ -65,4 +70,5 @@ export type Actions =
   | DELETE_ONE_BY_UUID
   | SELECT_NODE
   | UPDATE_ONE
+  | UPDATE_ONE_NO_UNDO
   | UPDATE_ALL;

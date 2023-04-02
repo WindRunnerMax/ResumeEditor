@@ -25,7 +25,9 @@ export const reducer = (state: State, action: Actions): void | State => {
     }
     case actions.REPLACE_STATE: {
       state.cld = action.payload;
-      state.selectedNode = { id: "", name: "" };
+      if (state.selectedNode.id) {
+        state.selectedNode = { id: "", name: "" };
+      }
       break;
     }
     case actions.ADD_SECTION: {
@@ -63,9 +65,15 @@ export const reducer = (state: State, action: Actions): void | State => {
       history.collect(state.cld);
       break;
     }
+    case actions.UPDATE_ONE_NO_UNDO: {
+      const { id: uuid, key, data, merge = true } = action.payload;
+      updateOneInNodeTree(state.cld.children, uuid, key, data, merge);
+      break;
+    }
     case actions.UPDATE_ALL: {
       const { data } = action.payload;
       state.cld.children = data;
+      history.collect(state.cld);
       break;
     }
     case actions.SELECT_NODE: {

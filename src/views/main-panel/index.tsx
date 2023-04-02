@@ -13,6 +13,7 @@ import { ToolBar } from "src/views/main-panel/components/tool-bar";
 import { ResizeObserverHOC } from "./components/reszie-observe";
 import { Empty } from "./components/empty";
 import { cs } from "src/utils/common/style";
+import { isEqual } from "lodash";
 const ResponsiveGridLayout = WidthProvider(GridLayout);
 
 type PedestalMainProps = {
@@ -39,10 +40,11 @@ export const MainPanel: React.FC<PedestalMainProps> = props => {
         config: { ...curNode.config, layout: { ...item } },
       } as LocalComponentConfig;
     });
-    dispatch({
-      type: actions.UPDATE_ALL,
-      payload: { data: nodeChildren },
-    });
+    !isEqual(state.cld.children, nodeChildren) &&
+      dispatch({
+        type: actions.UPDATE_ALL,
+        payload: { data: nodeChildren },
+      });
   };
 
   const focusElement = (

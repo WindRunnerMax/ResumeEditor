@@ -10,6 +10,7 @@ export type HistoryCallback = (data: {
 }) => void;
 
 class HistoryModule<T> {
+  private current: T | null;
   private undoStack: T[];
   private redoStack: T[];
   private max: number;
@@ -20,30 +21,41 @@ class HistoryModule<T> {
     this.redoStack = [];
     this.max = 10;
     this.events = [];
+    this.current = null;
   }
 
   public collect(data: T): void {
-    this.undoStack.push(cloneDeep(data));
-    this.redoStack = [];
-    if (this.undoStack.length > this.max) {
-      this.undoStack.shift();
+    if (this.current) {
+      this.undoStack.push(this.current);
+      this.redoStack = [];
+      if (this.undoStack.length > this.max) {
+        this.undoStack.shift();
+      }
     }
+    this.current = cloneDeep(data);
     this.call("collect");
-    console.log("this.history", this);
   }
 
   public undo(): T | null {
     const data = this.undoStack.pop();
-    data && this.redoStack.push(data);
-    this.call("undo");
-    return data || null;
+    if (data) {
+      this.current && this.redoStack.push(this.current);
+      this.current = data;
+      this.call("undo");
+      return data;
+    }
+    return null;
   }
 
   public redo(): T | null {
     const data = this.redoStack.pop();
-    data && this.undoStack.push(data);
-    this.call("redo");
-    return data || null;
+    if (data) {
+      this.current && this.undoStack.push(this.current);
+      this.current = data;
+      this.call("redo");
+      return data;
+    }
+    return null;
   }
 
   public undoable(): boolean {

@@ -48,7 +48,7 @@ export const RichText: FC<{
   const updateText = useMemoizedFn(
     debounce((text: Descendant[]) => {
       props.dispatch({
-        type: actions.UPDATE_ONE,
+        type: actions.UPDATE_ONE_NO_UNDO,
         payload: { id: props.instance.id, key: "props", data: { text } },
       });
     }, 500)
