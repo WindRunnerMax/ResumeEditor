@@ -41,7 +41,7 @@ export const OpNav: FC<{
         </Link>
       </div>
       <div className="op-nav-label">操作</div>
-      <div className="op-nav-body">
+      <div className="op-nav-body op-nav-body-multi">
         <Link disabled={!undoable} onClick={undo}>
           <IconUndo style={{ marginRight: 3 }} />
           <span>后退</span>

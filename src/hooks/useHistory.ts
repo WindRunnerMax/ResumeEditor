@@ -1,5 +1,4 @@
 import { cloneDeep } from "lodash";
-import { useCallback, useEffect, useState } from "react";
 import { CLD } from "src/store/reducer";
 
 export type HistoryType = "undo" | "redo" | "collect" | "clear";
@@ -97,20 +96,8 @@ class HistoryModule<T> {
 export const history = new HistoryModule<CLD>();
 
 export const useHistory = () => {
-  const [undoable, setUndoable] = useState(history.undoable());
-  const [redoable, setRedoable] = useState(history.redoable());
-
-  const onHistoryChange: HistoryCallback = useCallback(data => {
-    setUndoable(data.undoLength > 0);
-    setRedoable(data.redoLength > 0);
-  }, []);
-
-  useEffect(() => {
-    history.on(onHistoryChange);
-    return () => {
-      history.off(onHistoryChange);
-    };
-  }, [onHistoryChange]);
+  const undoable = history.undoable();
+  const redoable = history.redoable();
 
   return { history, undoable, redoable };
 };
