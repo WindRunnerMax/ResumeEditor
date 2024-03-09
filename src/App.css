@@ -1,6 +1,15 @@
+/* stylelint-disable selector-max-id */
+/* stylelint-disable no-duplicate-selectors */
 @import './styles/asse.css';
 @import 'react-grid-layout/css/styles.css';
 @import 'react-resizable/css/styles.css';
+
+html,
+body,
+#root,
+.resume-editor {
+  height: 100%;
+}
 
 body {
   --color-blue: #4c98f7;
@@ -10,41 +19,61 @@ body {
   --color-orange: #ff5722;
   --color-grey: #606266;
 
+  color: var(--color-text-1);
   margin: 0;
+  overscroll-behavior: none;
   padding: 0;
 }
 
-.resume-editor {
+* {
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.editor-body {
   display: flex;
-  min-height: 100vh;
+  height: calc(100% - 50px);
+  overflow: auto;
   width: 100%;
 }
 
-.resume-editor > .control-panel,
-.resume-editor > .editor-panel {
+.editor-body > .control-panel,
+.editor-body > .editor-panel {
   flex-shrink: 0;
-  width: 230px;
+  width: 260px;
 }
 
-.resume-editor > .main-panel {
+.resume-editor-preview > .main-panel,
+.editor-body > .main-panel {
   background-color: #eee;
   flex: 1;
+  height: 100%;
   overflow: auto;
 }
 
 @media print {
-  .resume-editor {
+  .arco-trigger,
+  .header-container {
+    display: none !important;
+  }
+
+  .editor-body {
     display: inline-block;
     min-height: auto;
     width: auto;
   }
 
-  .resume-editor > .control-panel,
-  .resume-editor > .editor-panel {
+  .editor-body > .control-panel,
+  .editor-body > .editor-panel {
     display: none !important;
   }
 
-  .resume-editor > .main-panel {
+  .editor-body > .main-panel {
     background-color: #fff !important;
     overflow: visible;
   }

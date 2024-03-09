@@ -1,0 +1,95 @@
+/* stylelint-disable selector-pseudo-class-no-unknown */
+@import '../../styles/variable';
+
+.container {
+  @include flex-align-center;
+  @include flex-justify-between;
+
+  background-color: var(--color-bg-1);
+  border-bottom: 1px solid var(--color-border-2);
+  box-sizing: border-box;
+  height: 50px;
+  padding: 0 10px;
+  user-select: none;
+
+  .opGroup {
+    @include flex-align-center;
+
+    .op {
+      @include flex-center;
+      @include border-radius-3;
+
+      cursor: pointer;
+      font-size: 18px;
+      height: 23px;
+      margin-left: 10px;
+      padding: 3px;
+      width: 23px;
+
+      &:hover {
+        background-color: var(--color-fill-1);
+      }
+
+      &.active {
+        background-color: var(--color-fill-2);
+      }
+    }
+  }
+
+  .externalGroup {
+    @include flex-align-center;
+
+    user-select: none;
+
+    .history {
+      @include flex-align-center;
+
+      margin-right: 5px;
+
+      :global {
+        .arco-btn-text {
+          @include flex-center;
+
+          cursor: pointer;
+          margin-top: -1px;
+          padding: 3px;
+        }
+      }
+    }
+
+    .github {
+      color: var(--color-text-1);
+      font-size: 20px;
+      margin-left: 5px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.menu {
+  :global(.arco-dropdown-menu-item) {
+    font-size: 12px;
+
+    a {
+      color: var(--color-text-1);
+      text-decoration: none;
+    }
+  }
+}
+
+.resizeModal {
+  :global {
+    .arco-modal-header .arco-icon-exclamation-circle-fill {
+      display: none;
+    }
+  }
+
+  .modalContent {
+    @include flex-center;
+
+    .input {
+      margin-left: 10px;
+      width: 80px;
+    }
+  }
+}

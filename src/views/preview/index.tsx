@@ -5,7 +5,7 @@ import LiveUpdate from "./live-update";
 
 export const ResumePreview: FC = () => {
   return (
-    <div className="resume-editor">
+    <div className="resume-editor-preview">
       <AppProvider mode={"render"}>
         <LiveUpdate></LiveUpdate>
         <MainPanel

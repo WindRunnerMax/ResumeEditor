@@ -10,6 +10,7 @@ import { isMobile } from "./utils/common/is";
 import { useUpdateEffect } from "./hooks/useUpdateEffect";
 import { LazyLoad } from "./components/lazy-load";
 import { lazy } from "react";
+import { Header } from "./views/header";
 
 const JSONEditor = lazy(() => import("./views/json-editor"));
 const ResumePreview = lazy(() => import("./views/preview"));
@@ -41,15 +42,18 @@ export default () => {
     <div className="resume-editor">
       <AppProvider mode={isRender ? "render" : "editor"}>
         <Debug></Debug>
-        <ControlPanel className="control-panel"></ControlPanel>
-        <MainPanel
-          className="main-panel"
-          rowHeight={8}
-          cols={60}
-          minHeight="296mm"
-          allowOverlap={true}
-        ></MainPanel>
-        <EditorPanel className="editor-panel" exportPDF={exportPDF}></EditorPanel>
+        <Header exportPDF={exportPDF}></Header>
+        <div className="editor-body">
+          <ControlPanel className="control-panel"></ControlPanel>
+          <MainPanel
+            className="main-panel"
+            rowHeight={8}
+            cols={60}
+            minHeight="296mm"
+            allowOverlap={true}
+          ></MainPanel>
+          <EditorPanel className="editor-panel"></EditorPanel>
+        </div>
       </AppProvider>
     </div>
   );

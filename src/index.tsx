@@ -6,5 +6,5 @@ import { image } from "./modules/image";
 import { richText } from "./modules/text";
 import { blank } from "./modules/blank";
 
-register(image, richText, blank);
+register(image, blank, richText);
 ReactDOM.render(<App />, document.getElementById("root"));

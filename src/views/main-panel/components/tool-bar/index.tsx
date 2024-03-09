@@ -8,6 +8,7 @@ import { Layout } from "react-grid-layout";
 import { cloneDeep } from "lodash";
 import { v4 as uuid } from "uuid";
 import { isObject } from "src/utils/common/is";
+import { useEffect, useState } from "react";
 
 export const ToolBar: React.FC<{
   selectedId: string;
@@ -16,7 +17,12 @@ export const ToolBar: React.FC<{
   cols: number;
   display: boolean;
 }> = props => {
+  const [visible, setVisible] = useState(false);
   const { selectedId, dispatch, config, cols } = props;
+
+  useEffect(() => {
+    setVisible(props.display && selectedId === config.id);
+  }, [config.id, props.display, props.selectedId, selectedId]);
 
   const deleteBaseSection = () => {
     dispatch({ type: actions.DELETE_ONE_BY_UUID, payload: config.id });
@@ -63,7 +69,7 @@ export const ToolBar: React.FC<{
 
   return (
     <Trigger
-      popupVisible={props.display && selectedId === config.id}
+      popupVisible={visible}
       popup={() => Menu}
       position="top"
       trigger="contextMenu"
