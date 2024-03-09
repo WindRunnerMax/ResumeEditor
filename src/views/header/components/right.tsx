@@ -1,20 +1,32 @@
 import { Button, Dropdown, Menu } from "@arco-design/web-react";
 import { IconDown, IconGithub, IconRedo, IconUndo } from "@arco-design/web-react/icon";
-import type { FC } from "react";
+import { FC, useContext } from "react";
 import styles from "../index.module.scss";
 import { cs } from "src/utils/common/style";
 import { useHistory } from "src/hooks/useHistory";
+import { AppContext } from "src/store/context";
 
 export const Right: FC<{
   exportPDF: () => void;
 }> = props => {
+  const { dispatch } = useContext(AppContext);
   const { history, undoable, redoable } = useHistory();
+
+  const undo = () => {
+    const cld = undoable && history.undo();
+    cld && dispatch({ type: "REPLACE_STATE", payload: cld });
+  };
+
+  const redo = () => {
+    const cld = redoable && history.redo();
+    cld && dispatch({ type: "REPLACE_STATE", payload: cld });
+  };
 
   return (
     <div className={cs(styles.externalGroup)}>
       <div className={styles.history}>
         <Button
-          onClick={() => history.undo()}
+          onClick={undo}
           disabled={!undoable}
           iconOnly
           icon={<IconUndo />}
@@ -22,7 +34,7 @@ export const Right: FC<{
           size="small"
         ></Button>
         <Button
-          onClick={() => history.redo()}
+          onClick={redo}
           disabled={!redoable}
           iconOnly
           icon={<IconRedo />}

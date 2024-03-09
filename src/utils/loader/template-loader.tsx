@@ -1,4 +1,4 @@
-const basePath = process.env.PUBLIC_URL + "/templates/";
+const BASE_PATH = process.env.PUBLIC_URL + "/templates/";
 
 export type TemplateConfig = {
   name: string;
@@ -8,19 +8,44 @@ export type TemplateConfig = {
 
 export const TEMPLATE_CONFIG: TemplateConfig[] = [
   {
-    image: basePath + "social-simple.jpg",
     name: "简洁模版",
-    template: basePath + "social-simple.json",
+    image: BASE_PATH + "social-simple/index.jpg",
+    template: BASE_PATH + "social-simple/index.json",
   },
   {
-    image: basePath + "social.jpg",
     name: "单列模版",
-    template: basePath + "social.json",
+    image: BASE_PATH + "social/index.jpg",
+    template: BASE_PATH + "social/index.json",
   },
   {
-    image: basePath + "campus.jpg",
     name: "双列模版",
-    template: basePath + "campus.json",
+    image: BASE_PATH + "campus/index.jpg",
+    template: BASE_PATH + "campus/index.json",
+  },
+  {
+    name: "FE-Czy",
+    image: BASE_PATH + "czy/index.jpeg",
+    template: BASE_PATH + "czy/index.json",
+  },
+  {
+    name: "FE-Hty",
+    image: BASE_PATH + "hty/index.jpeg",
+    template: BASE_PATH + "hty/index.json",
+  },
+  {
+    name: "FE-Lbz",
+    image: BASE_PATH + "lbz/index.jpeg",
+    template: BASE_PATH + "lbz/index.json",
+  },
+  {
+    name: "BE-Lmz",
+    image: BASE_PATH + "lmz/index.jpeg",
+    template: BASE_PATH + "lmz/index.json",
+  },
+  {
+    name: "FE-Wxy",
+    image: BASE_PATH + "wxy/index.jpeg",
+    template: BASE_PATH + "wxy/index.json",
   },
 ];
 

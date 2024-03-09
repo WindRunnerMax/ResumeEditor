@@ -13,7 +13,6 @@ export const MobilePreview: FC = () => {
   return (
     <div className="mobile-resume-editor">
       <AppProvider mode={"render"}>
-        <ControlPanel className="mobile-control-panel"></ControlPanel>
         <MainPanel
           className="mobile-main-panel"
           rowHeight={8}
@@ -21,6 +20,7 @@ export const MobilePreview: FC = () => {
           minHeight="296mm"
           allowOverlap={false}
         ></MainPanel>
+        <ControlPanel className="mobile-control-panel" mobile></ControlPanel>
       </AppProvider>
     </div>
   );

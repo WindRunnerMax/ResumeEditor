@@ -52,6 +52,7 @@ export const ToolBar: React.FC<{
     const newId = uuid();
     const newConfig = { config: { ...cloneDeep(config), id: newId } };
     if (isObject(newConfig.config.config.layout)) newConfig.config.config.layout.i = newId;
+    newConfig.config.config.layout.y = newConfig.config.config.layout.y + 10;
     dispatch({
       type: actions.ADD_SECTION,
       payload: newConfig,

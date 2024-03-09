@@ -62,6 +62,13 @@ body {
     display: none !important;
   }
 
+  html,
+  body,
+  #root,
+  .resume-editor {
+    height: auto;
+  }
+
   .editor-body {
     display: inline-block;
     min-height: auto;

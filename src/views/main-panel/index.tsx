@@ -14,6 +14,7 @@ import { ResizeObserverHOC } from "./components/reszie-observe";
 import { Empty } from "./components/empty";
 import { cs } from "src/utils/common/style";
 import { isEqual } from "lodash";
+
 const ResponsiveGridLayout = WidthProvider(GridLayout);
 
 type PedestalMainProps = {
@@ -69,15 +70,20 @@ export const MainPanel: React.FC<PedestalMainProps> = props => {
     setDragging(true);
   };
 
-  const dragStop = () => {
+  const dragStop: GridLayout.ItemCallback = e => {
     setDragging(false);
+    // 在`allowOverlap`状态下不会触发`LayoutChange`
+    layoutChange(e);
   };
 
   const resizeStart = () => {
     setDragging(true);
   };
-  const resizeStop = () => {
+
+  const resizeStop: GridLayout.ItemCallback = e => {
     setDragging(false);
+    // 同上
+    layoutChange(e);
   };
 
   return (
@@ -98,7 +104,8 @@ export const MainPanel: React.FC<PedestalMainProps> = props => {
                 autoSize
                 draggableHandle=".pedestal-drag-dot"
                 margin={[0, 0]}
-                onLayoutChange={layoutChange}
+                // https://github.com/react-grid-layout/react-grid-layout/issues/1775
+                // onLayoutChange={layoutChange}
                 cols={cols}
                 rowHeight={rowHeight}
                 measureBeforeMount
@@ -148,7 +155,7 @@ export const MainPanel: React.FC<PedestalMainProps> = props => {
                           ></Component>
                         )}
                       </ToolBar>
-                      <div className="pedestal-drag-dot" onMouseUp={dragStop}>
+                      <div className="pedestal-drag-dot" onMouseUp={() => setDragging(false)}>
                         <IconDragDot />
                       </div>
                     </div>

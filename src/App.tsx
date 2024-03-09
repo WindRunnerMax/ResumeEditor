@@ -39,7 +39,7 @@ export default () => {
   if (isJSON) return <LazyLoad component={<JSONEditor></JSONEditor>}></LazyLoad>;
 
   return (
-    <div className="resume-editor">
+    <div className="resume-editor" spellCheck={false}>
       <AppProvider mode={isRender ? "render" : "editor"}>
         <Debug></Debug>
         <Header exportPDF={exportPDF}></Header>

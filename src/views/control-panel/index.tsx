@@ -13,7 +13,7 @@ import { LocalComponentConfig } from "src/types/components";
 
 const TabPane = Tabs.TabPane;
 
-export const ControlPanel: React.FC<{ className: string }> = props => {
+export const ControlPanel: React.FC<{ className: string; mobile?: boolean }> = props => {
   const [loading, setLoading] = useState(false);
   const { state, dispatch } = useContext(AppContext);
 
@@ -117,6 +117,10 @@ export const ControlPanel: React.FC<{ className: string }> = props => {
     ),
     [onDeleteNode, onSelectNode, state.cld.children, state.selectedNode.id]
   );
+
+  if (props.mobile) {
+    return <div className={cs(props.className, styles.container)}>{templateTabPanel}</div>;
+  }
 
   return (
     <div className={cs(props.className, styles.container)}>
