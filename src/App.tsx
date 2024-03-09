@@ -47,7 +47,7 @@ export default () => {
           rowHeight={8}
           cols={60}
           minHeight="296mm"
-          allowOverlap={false}
+          allowOverlap={true}
         ></MainPanel>
         <EditorPanel className="editor-panel" exportPDF={exportPDF}></EditorPanel>
       </AppProvider>
