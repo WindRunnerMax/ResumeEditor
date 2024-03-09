@@ -1,7 +1,9 @@
 .view-editor-panel {
   border-left: 1px solid var(--color-border-2);
+  box-sizing: border-box;
   height: 100%;
   max-height: 100vh;
+  padding: 10px;
   position: fixed;
   width: 230px;
 }

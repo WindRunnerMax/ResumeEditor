@@ -1,18 +1,24 @@
 const basePath = process.env.PUBLIC_URL + "/templates/";
 
-export const templateConfig = [
+export type TemplateConfig = {
+  name: string;
+  image: string;
+  template: string;
+};
+
+export const TEMPLATE_CONFIG: TemplateConfig[] = [
   {
-    label: basePath + "social-simple.jpg",
+    image: basePath + "social-simple.jpg",
     name: "简洁模版",
     template: basePath + "social-simple.json",
   },
   {
-    label: basePath + "social.jpg",
+    image: basePath + "social.jpg",
     name: "单列模版",
     template: basePath + "social.json",
   },
   {
-    label: basePath + "campus.jpg",
+    image: basePath + "campus.jpg",
     name: "双列模版",
     template: basePath + "campus.json",
   },
