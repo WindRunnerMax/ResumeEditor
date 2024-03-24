@@ -5,11 +5,12 @@ import styles from "../index.module.scss";
 import { cs } from "src/utils/common/style";
 import { useHistory } from "src/hooks/useHistory";
 import { AppContext } from "src/store/context";
+import { exportJSON } from "../utils/export-json";
 
 export const Right: FC<{
   exportPDF: () => void;
 }> = props => {
-  const { dispatch } = useContext(AppContext);
+  const { state, dispatch } = useContext(AppContext);
   const { history, undoable, redoable } = useHistory();
 
   const undo = () => {
@@ -81,6 +82,11 @@ export const Right: FC<{
                 实时预览
               </a>
             </Menu.Item>
+            <Menu.Item key="2">
+              <a href="?json" target="_blank">
+                JSON编辑
+              </a>
+            </Menu.Item>
           </Menu>
         }
         trigger="click"
@@ -100,9 +106,9 @@ export const Right: FC<{
               </div>
             </Menu.Item>
             <Menu.Item key="1">
-              <a href="?json" target="_blank">
+              <div className={styles.export} onClick={() => exportJSON(state.cld)}>
                 JSON
-              </a>
+              </div>
             </Menu.Item>
           </Menu>
         }

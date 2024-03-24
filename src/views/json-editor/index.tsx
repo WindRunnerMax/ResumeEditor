@@ -1,5 +1,5 @@
 import styles from "./index.module.scss";
-import React, { FC, useEffect, useRef } from "react";
+import { FC, useEffect, useRef } from "react";
 import Editor, { JSONEditorOptions } from "jsoneditor";
 import "jsoneditor/dist/jsoneditor.css";
 import storage from "src/utils/common/storage";
