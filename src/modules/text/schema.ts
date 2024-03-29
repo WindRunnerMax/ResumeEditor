@@ -1,10 +1,11 @@
-import { DIVIDING_LINE_KEY, SlateSchema, IMAGE_KEY } from "doc-editor-light";
+import { EditorSchema } from "doc-editor-core";
+import { DIVIDING_LINE_KEY, IMAGE_KEY } from "doc-editor-plugin";
 
-export const schema: SlateSchema = {
+export const schema: EditorSchema = {
   [IMAGE_KEY]: {
-    isVoid: true,
+    void: true,
   },
   [DIVIDING_LINE_KEY]: {
-    isVoid: true,
+    void: true,
   },
 };

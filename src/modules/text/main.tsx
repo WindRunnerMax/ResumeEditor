@@ -1,11 +1,11 @@
 import "./index.scss";
-import "doc-editor-light/dist/styles/index";
+import "doc-editor-plugin/dist/styles/index";
+
 import { FC, useMemo } from "react";
 import { LocalComponentConfig } from "src/types/components";
 import { classes } from "src/utils/common/style";
-import { withHistory } from "slate-history";
-import { Editable, Slate, withReact } from "slate-react";
-import { createEditor, Descendant } from "slate";
+import { EditorPlugin, makeEditor } from "doc-editor-core";
+import { EditorProvider, BaseNode, Editable } from "doc-editor-delta";
 import {
   AlignPlugin,
   BoldPlugin,
@@ -22,11 +22,9 @@ import {
   StrikeThroughPlugin,
   UnderLinePlugin,
   UnorderedListPlugin,
-  SlatePlugins,
   FontBasePlugin,
   LineHeightPlugin,
-  withSchema,
-} from "doc-editor-light";
+} from "doc-editor-plugin";
 import { useMemoizedFn } from "ahooks";
 import { debounce } from "lodash";
 import { actions } from "src/store/actions";
@@ -39,14 +37,14 @@ export const RichText: FC<{
   dispatch: ContextDispatch;
   isRender: boolean;
 }> = props => {
-  const editor = useMemo(() => withSchema(schema, withHistory(withReact(createEditor()))), []);
+  const editor = useMemo(() => makeEditor(schema), []);
 
-  const initText = (props.instance.props as Record<string, Descendant[]>).text || [
+  const initText = (props.instance.props as Record<string, BaseNode[]>).text || [
     { children: [{ text: "" }] },
   ];
 
   const updateText = useMemoizedFn(
-    debounce((text: Descendant[]) => {
+    debounce((text: BaseNode[]) => {
       props.dispatch({
         type: actions.UPDATE_ONE_NO_UNDO,
         payload: { id: props.instance.id, key: "props", data: { text } },
@@ -54,8 +52,8 @@ export const RichText: FC<{
     }, 500)
   );
 
-  const { renderElement, renderLeaf, onKeyDown, commands, onCopy } = useMemo(() => {
-    const register = new SlatePlugins(
+  const { renderElement, renderLeaf, onKeyDown, commands } = useMemo(() => {
+    const register = new EditorPlugin(
       ParagraphPlugin(),
       HeadingPlugin(editor),
       BoldPlugin(),
@@ -81,7 +79,7 @@ export const RichText: FC<{
 
   return (
     <div className={classes("pedestal-text", props.className)} style={props.instance.style}>
-      <Slate editor={editor} value={initText} onChange={updateText}>
+      <EditorProvider editor={editor} value={initText} onChange={updateText}>
         <div onClick={e => e.stopPropagation()}>
           <MenuToolBar readonly={props.isRender} commands={commands} editor={editor}></MenuToolBar>
         </div>
@@ -91,9 +89,8 @@ export const RichText: FC<{
           readOnly={props.isRender}
           placeholder="Enter text ..."
           onKeyDown={onKeyDown}
-          onCopy={e => onCopy(e, editor)}
         />
-      </Slate>
+      </EditorProvider>
     </div>
   );
 };

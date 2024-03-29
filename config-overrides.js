@@ -1,4 +1,10 @@
-const { override, fixBabelImports, disableEsLint, addLessLoader } = require("customize-cra");
+const {
+  override,
+  fixBabelImports,
+  disableEsLint,
+  addLessLoader,
+  addWebpackExternals,
+} = require("customize-cra");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
@@ -15,6 +21,9 @@ const configWebpackPlugins = () => config => {
       plugin.constructor.name !== "CaseSensitivePathsPlugin" &&
       plugin.constructor.name !== "IgnorePlugin"
   );
+  config.resolve.plugins = config.resolve.plugins.filter(
+    plugin => plugin.constructor.name !== "ModuleScopePlugin"
+  );
   // 添加插件
   process.env.NODE_ENV === "production" &&
     config.plugins.push(
@@ -26,11 +35,21 @@ const configWebpackPlugins = () => config => {
     config.plugins.push(
       new BundleAnalyzerPlugin({ analyzerMode: "static", reportFilename: "report.html" })
     );
+  // `Babel mjs`
+  config.module.rules.push({
+    test: /\.mjs$/,
+    include: /node_modules/,
+    type: "javascript/auto",
+  });
   return config;
 };
 
 module.exports = {
   webpack: override(
+    addWebpackExternals({
+      "react": "React",
+      "react-dom": "ReactDOM",
+    }),
     fixBabelImports("@arco-design/web-react", {
       libraryDirectory: "es",
       camel2DashComponentName: false,

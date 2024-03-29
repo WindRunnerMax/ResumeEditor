@@ -1,5 +1,5 @@
 import { Layout } from "react-grid-layout";
-import { BaseLocalComponent, LocalComponent } from "src/types/components";
+import { LocalComponent } from "src/types/components";
 import { RichTextControl } from "./control";
 import { RichTextEditor } from "./editor";
 import { RichText } from "./main";
