@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-    <meta name="theme-color" content="#000000" />
     <meta
-      name="description"
-      content="Resume Editor"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport"
     />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Resume Editor" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -27,29 +27,33 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <% if (process.env.NODE_ENV === 'production') { %>
-      <script
-        src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/react/17.0.2/umd/react.production.min.js"
-        type="application/javascript"
-        crossorigin
-      ></script>
-      <script
-        src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/react-dom/17.0.2/umd/react-dom.production.min.js"
-        type="application/javascript"
-        crossorigin
-      ></script>
-      <% } else { %>
-      <script
-        src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/react/17.0.2/umd/react.development.js"
-        type="application/javascript"
-        crossorigin
-      ></script>
-      <script
-        src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/react-dom/17.0.2/umd/react-dom.development.js"
-        type="application/javascript"
-        crossorigin
-      ></script>
-      <% } %>
+    <% if (process.env.NODE_ENV === "production") { %>
+    <script
+      src="https://registry.npmmirror.com/react/17.0.2/files/umd/react.production.min.js"
+      type="application/javascript"
+      referrerpolicy="no-referrer"
+      crossorigin
+    ></script>
+    <script
+      src="https://registry.npmmirror.com/react-dom/17.0.2/files/umd/react-dom.production.min.js"
+      type="application/javascript"
+      referrerpolicy="no-referrer"
+      crossorigin
+    ></script>
+    <% } else { %>
+    <script
+      src="https://registry.npmmirror.com/react/17.0.2/files/umd/react.development.js"
+      type="application/javascript"
+      referrerpolicy="no-referrer"
+      crossorigin
+    ></script>
+    <script
+      src="https://registry.npmmirror.com/react-dom/17.0.2/files/umd/react-dom.development.js"
+      type="application/javascript"
+      referrerpolicy="no-referrer"
+      crossorigin
+    ></script>
+    <% } %>
     <div id="root"></div>
     <!--
       This HTML file is a template.
